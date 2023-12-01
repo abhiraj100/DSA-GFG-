@@ -1,0 +1,12 @@
+isMirror Method:
+This is a recursive helper method that checks whether two trees (node1 and node2) are mirror images of each other.
+The base case checks if both nodes are null. If true, they are considered mirror images, and the method returns true.
+If only one of the nodes is null, they can't be mirror images, so the method returns false.
+The method then checks if the values of the current nodes are equal and if their left subtrees (node1.left and node2.right) are mirror images of each other, and their right subtrees (node1.right and node2.left) are mirror images of each other.
+The method returns true only if all conditions are met.
+
+isSymmetric Method:
+This is the main function to check whether a binary tree is symmetric.
+It checks if the root of the tree is null. If true, the tree is considered symmetric, and the method returns true.
+Otherwise, it calls the isMirror method to check if the left and right subtrees of the root are mirror images of each other.
+The method returns true only if the left and right subtrees are mirror images.
