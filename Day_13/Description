@@ -1,0 +1,12 @@
+The sumK method is the main function that users can call to get the answer. It initializes the answer (ans) and a HashMap (mp) to store intermediate results.
+
+The sumK_util method is a utility function that performs the actual calculation. It takes a Node (root), a target sum (sum), and a current sum (cur) as parameters.
+
+In the sumK_util method:
+
+It checks if cur + root.data - sum exists in the HashMap (mp). If yes, it adds its frequency to the answer (ans).
+It checks if cur + root.data is equal to the target sum. If yes, it increments the answer by 1.
+It updates the frequency of cur + root.data in the HashMap.
+It recursively calls the function for the left and right subtrees.
+It decrements the frequency of cur + root.data in the HashMap.
+The sumK method calls the sumK_util method and then clears the HashMap. It stores the answer in a temporary variable, resets the answer variable, and returns the temporary variable as the final answer.
