@@ -1,0 +1,10 @@
+The method findIntersection initializes a dummy node. This node is used to simplify the construction of the intersection list. The actual intersection list (intersectionList) starts with the next node after the dummy.
+
+The code then enters a while loop that continues until either of the input lists (head1 or head2) becomes null. The loop traverses both lists simultaneously.
+
+Inside the loop:
+
+If the data in both nodes is equal, it means there is an intersection. The data is added to the intersectionList, and both pointers (head1 and head2) are moved to the next nodes.
+If the data in the first list is smaller, the pointer head1 is moved to the next node in the first list.
+If the data in the second list is smaller, the pointer head2 is moved to the next node in the second list.
+After the loop, the intersection list is constructed, and the dummy node is used to skip the initial zero value. The method returns the head of the intersection list.
