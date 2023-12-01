@@ -1,0 +1,12 @@
+The areIsomorphic function checks if the lengths of the two strings are equal. If not, it immediately returns false as strings of different lengths cannot be isomorphic.
+
+It uses a HashMap to keep track of the mapping between characters of str1 and str2.
+
+It iterates through each character of the strings and checks the following:
+
+If char1 is already in the map, it checks if the mapping is consistent with char2.
+If char1 is not in the map, it checks if char2 is already mapped to another character. If yes, the strings are not isomorphic.
+If both conditions are satisfied, it adds the mapping of char1 to char2 in the map.
+If the loop completes without returning false, the strings are considered isomorphic, and the function returns true.
+
+The main method demonstrates the usage of the areIsomorphic function by checking if the strings "egg" and "add" are isomorphic. The output is printed accordingly.
