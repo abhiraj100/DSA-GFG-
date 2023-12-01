@@ -1,0 +1,16 @@
+Class Definition:
+The class is named MyStack.
+
+Instance Variables:
+int top: Represents the index of the top of the stack.
+int arr[] = new int[1000]: Represents the array used to implement the stack. It has a fixed size of 1000.
+
+Constructor:
+Initializes the top of the stack to -1 when an instance of MyStack is created.
+
+Push Method:
+Increments the top of the stack and assigns the value a to the corresponding position in the array.
+
+Pop Method:
+Checks if the stack is empty (top == -1). If so, returns -1 to indicate stack underflow.
+If the stack is not empty, returns the element at the top of the stack and decrements the top.
