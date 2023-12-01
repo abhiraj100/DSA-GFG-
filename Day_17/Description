@@ -1,0 +1,21 @@
+The method nthRowOfPascalTriangle takes an integer n as input and returns an ArrayList of Long integers representing the nth row of Pascal's Triangle.
+
+It initializes an ArrayList pre to store the previous row of Pascal's Triangle.
+
+A loop runs for each row up to the nth row (for (int i = 0; i < n; i++)).
+
+Inside the loop, a new ArrayList current is initialized to store the current row.
+
+Another loop runs for each element in the current row (for (int j = 0; j < i + 1; j++)).
+
+Inside the inner loop, the code checks if the current element is the first or last in the row (if (j == i | j == 0)). If true, it adds 1 to the current row.
+
+If the current element is not the first or last, it calculates the value by adding the corresponding elements from the previous row (pre.get(j) + pre.get(j - 1)) and takes the result modulo 1000000007 (mod).
+
+The calculated value is added to the current row.
+
+After constructing the current row, it becomes the new pre (previous) row for the next iteration.
+
+The loop continues until the nth row is constructed.
+
+Finally, the method returns the ArrayList representing the nth row of Pascal's Triangle (return pre).
