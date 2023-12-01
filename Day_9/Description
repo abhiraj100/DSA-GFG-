@@ -1,0 +1,17 @@
+The method initializes a StringBuilder named ans to store the result string. It starts with a string of '0' characters.
+
+The variable k is decremented because the characters are assumed to be in the range [0, k-1].
+
+A HashSet named visited is used to keep track of visited strings to ensure uniqueness.
+
+The code then enters a loop that continues until all possible strings of length n with characters in the range [0, k-1] are visited.
+
+In each iteration, the last (n-1) characters of the current result string (previous) are considered.
+
+The code iterates from k down to 0 to find the next character. It creates a candidate string (currStr) by appending the new character to the previous substring.
+
+If the candidate string is not already visited, it is added to the set of visited strings, and the new character is appended to the result string.
+
+The loop continues until all possible strings are visited.
+
+The final generated string is returned.
