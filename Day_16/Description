@@ -1,0 +1,23 @@
+insertToAVL Method:
+
+This method recursively inserts a new node with the given data into the AVL tree.
+If the current node is null, a new node is created with the given data.
+If the data is less than the current node's data, the insertion is performed in the left subtree.
+If the data is greater than the current node's data, the insertion is performed in the right subtree.
+If the data is equal to the current node's data, no insertion is needed, and the current node is returned.
+After insertion, the height of the current node is updated, and the balance factor (bf) is calculated.
+Depending on the balance factor, rotations are performed to maintain the AVL tree property.
+rightRotate Method:
+
+This method performs a right rotation on the provided node (y) and returns the new root of the rotated subtree.
+It updates the heights of the affected nodes after the rotation.
+leftRotate Method:
+
+This method performs a left rotation on the provided node (x) and returns the new root of the rotated subtree.
+It updates the heights of the affected nodes after the rotation.
+getBalance Method:
+
+This method calculates and returns the balance factor of a given node. The balance factor is the difference in height between the left and right subtrees.
+height Method:
+
+This method returns the height of a given node. If the node is null, the height is considered 0.
