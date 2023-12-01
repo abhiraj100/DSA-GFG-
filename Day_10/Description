@@ -1,0 +1,10 @@
+treeInfo is a simple class that stores two Node references, head and tail.
+The inOrder method is a recursive function that performs an in-order traversal of the binary tree and returns a treeInfo object containing information about the head and tail of the CDLL for the current subtree.
+
+Inside the inOrder method:
+
+A new node (newNode) is created for the current root data.
+The newNode is connected to the previous tail in the left subtree and the next head in the right subtree.
+The output head and tail for the current subtree are determined, considering cases where the left or right subtree is empty.
+The treeInfo object for the current subtree is returned.
+The bTreeToClist method calls the inOrder method and then connects the head's left to the tail and the tail's right to the head to form a circular doubly linked list.
