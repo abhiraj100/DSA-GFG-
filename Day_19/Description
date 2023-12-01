@@ -1,0 +1,18 @@
+Initialization:
+Creates a new ArrayList of integers to store the pattern.
+
+Special Case Check:
+Checks if N is zero or negative. If true, adds N to the list and returns it.
+This handles the case where N is not a positive integer.
+
+Pattern Generation:
+Adds the initial value N to the list at index 0.
+Uses a do-while loop to subtract 5 from the previous element and add the result to the list until the last added element becomes non-positive.
+The loop index i is incremented after each iteration.
+
+Pattern Completion:
+Uses a second do-while loop to add 5 to the previous element and add the result to the list until the last added element becomes greater than or equal to N.
+The loop index i is incremented after each iteration.
+
+Return Result:
+Returns the final list containing the generated pattern.
