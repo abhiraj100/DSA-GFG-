@@ -1,0 +1,12 @@
+areRotations Method:
+
+This method checks if two strings, s1 and s2, are rotations of each other.
+It starts by checking if the lengths of both strings are the same. If they are not, it immediately returns false since strings of different lengths cannot be rotations of each other.
+It then concatenates s1 with itself, creating a new string named concatenated.
+Finally, it checks if s2 is a substring of the concatenated string. If it is, it means that s2 is a rotation of s1, and the method returns true. Otherwise, it returns false.
+
+main Method:
+The main method is used for testing the areRotations method.
+Two strings, s1 and s2, are initialized with values.
+The areRotations method is called with these two strings, and the result is checked.
+If areRotations returns true, it means that s2 is a rotation of s1, and a corresponding message is printed. If it returns false, a different message is printed.
