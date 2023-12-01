@@ -1,0 +1,11 @@
+The isIdentical method takes two Node objects (root1 and root2) as parameters.
+
+The first base case checks if both trees are empty (root1 == null && root2 == null). If true, the trees are identical, and the method returns true.
+
+The second base case checks if one tree is empty while the other is not (root1 == null || root2 == null). If true, the trees are not identical, and the method returns false.
+
+If none of the base cases is satisfied, it means both trees are non-empty. The method checks if the data at the current nodes (root1.data and root2.data) are equal.
+
+If the data at the current nodes is equal, the method recursively calls itself for the left subtrees (isIdentical(root1.left, root2.left)) and the right subtrees (isIdentical(root1.right, root2.right)).
+
+The method returns true only if the current nodes are equal, and both left and right subtrees are identical.
