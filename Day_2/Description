@@ -1,0 +1,5 @@
+It iterates through each column of the matrix.
+For each column, it counts the number of zeros in that column by iterating through each row.
+It compares the current count of zeros with the maximum count of zeros encountered so far.
+If the current count is greater than the maximum count, it updates the answer to the current column index.
+Finally, it returns the index of the column with the maximum number of zeros.
