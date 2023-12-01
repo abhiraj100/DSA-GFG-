@@ -1,0 +1,12 @@
+The shortestCommonSupersequence function uses dynamic programming to calculate the length of the shortest common supersequence.
+
+It creates a 2D array scs where scs[i][j] represents the length of the shortest common supersequence of the first i characters of string X and the first j characters of string Y.
+
+The function iterates through the strings and fills in the scs array based on the following logic:
+
+If either of the strings is empty, the length of the supersequence is the length of the other string.
+If the last characters of both strings match, reduce the problem to the rest of the strings.
+If the last characters are different, choose the minimum of two possibilities (include the last character of X or Y) and continue with the rest of the strings.
+The final result is stored in scs[m][n], where m and n are the lengths of strings X and Y respectively.
+
+The function returns the length of the shortest common supersequence.
