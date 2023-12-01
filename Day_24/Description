@@ -1,0 +1,16 @@
+Class Definition:
+The class is named Compute.
+
+Method Signature:
+Declares a method named rotate.
+Takes two parameters: an array of integers (arr) and an integer representing the length of the array (n). The length (n) is not used within the method.
+
+Variable Declaration:
+Declares an integer variable x and assigns it the value of the last element in the array arr.
+
+Right Rotation Loop:
+Initiates a for loop that iterates over the elements of the array from the last element to the second element.
+In each iteration, it shifts the value from the previous position to the current position.
+
+Setting First Element:
+After the loop completes, it sets the first element of the array (arr[0]) to the initially stored value x, which was the original last element.
