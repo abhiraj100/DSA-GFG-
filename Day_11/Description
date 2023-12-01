@@ -1,0 +1,11 @@
+The function starts by initializing a temporary variable temp with the head of the doubly linked list.
+
+It then enters a while loop that traverses the list. For each node in the list (except the last node), it reverses the prev and next pointers.
+
+Node t = temp.prev;: Save the reference to the previous node in a temporary variable t.
+temp.prev = temp.next;: Reverse the prev pointer to point to the next node.
+temp.next = t;: Reverse the next pointer to point to the previous node.
+temp = temp.prev;: Move to the next node in the original order.
+After the while loop, there is a separate handling for the last node. The same reversal logic is applied as in the loop.
+
+Finally, the function updates the head of the doubly linked list to the new starting point (which is now the last node in the original order), and it returns the new head.
