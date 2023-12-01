@@ -1,0 +1,11 @@
+The isRotated function first checks if the lengths of the two strings (str1 and str2) are equal. If not, it immediately returns false since strings of different lengths cannot be rotated versions of each other.
+
+It then initializes two boolean variables (b1 and b2) to check if str2 can be obtained by rotating str1 clockwise or anti-clockwise by exactly 2 places, respectively.
+
+The function uses two loops to compare characters:
+
+In the first loop (b1), it checks if each character of str1 matches the corresponding character in a clockwise rotated str2.
+In the second loop (b2), it checks if each character of str2 matches the corresponding character in an anti-clockwise rotated str1.
+If either b1 or b2 is true, the function returns true, indicating that one string can be obtained by rotating the other by exactly 2 places.
+
+If both b1 and b2 are false, the function returns false, indicating that the strings cannot be obtained by rotating each other by exactly 2 places.
