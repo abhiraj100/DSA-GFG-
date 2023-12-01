@@ -1,0 +1,16 @@
+Class Definition:
+The class is named MyQueue.
+
+Instance Variables:
+int front, rear: Represent the front and rear indices of the queue.
+int arr[] = new int[100005]: Represents the array used to implement the queue. It has a fixed size of 100005.
+
+Constructor:
+Initializes the front and rear indices to 0 when an instance of MyQueue is created.
+
+Push Method:
+Adds an element x to the rear of the queue and increments the rear index.
+
+Pop Method:
+Checks if the queue is empty (front == rear). If so, returns -1 to indicate an empty queue.
+If the queue is not empty, retrieves the element at the front of the queue (arr[front]), increments the front index, and returns the retrieved element.
