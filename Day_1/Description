@@ -1,0 +1,4 @@
+It iterates through each row of the matrix.
+If the current row index is even, it traverses the row from left to right and adds each element to the result ArrayList.
+If the current row index is odd, it traverses the row from right to left and adds each element to the result ArrayList.
+Finally, it returns the ArrayList containing the elements visited in snake pattern.
