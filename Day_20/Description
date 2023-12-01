@@ -1,0 +1,17 @@
+Method Signature:
+The method takes two parameters: a, which is an array of integers, and n, which represents the number of elements in the array.
+
+For-each Loop:
+This is a for-each loop that iterates over each element (num) in the array a.
+
+Palindrome Checking:
+Three variables are declared: original to store the original number, reversed to store the reversed number, and remainder to store the remainder in each iteration of the while loop.
+
+While Loop for Reversing:
+A while loop is used to reverse the number. It repeatedly takes the last digit of num, adds it to reversed, and then removes the last digit from num. This process continues until num becomes 0.
+
+Palindrome Check:
+After reversing the number, it checks if the original number is equal to the reversed number. If not, it means the number is not a palindrome, and the method returns 0 immediately.
+
+Returning 1 if all elements are palindromes:
+If the loop completes without returning 0 (meaning all elements are palindromes), the method returns 1.
