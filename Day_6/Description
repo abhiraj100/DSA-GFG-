@@ -1,0 +1,8 @@
+The method uses dynamic programming to fill in a 2D array scs, where scs[i][j] represents the length of the shortest common supersequence of the first i characters of string X and the first j characters of string Y.
+
+The initialization of the array is as follows:
+
+If either X or Y is an empty string (i.e., i or j is 0), then the length of the supersequence is the length of the non-empty string. So, scs[i][j] is set to i or j accordingly.
+If X.charAt(i - 1) == Y.charAt(j - 1), it means the current characters match, and the length of the supersequence is incremented by 1 compared to the supersequence without these characters.
+If the characters are different, the length is incremented by 1 and the minimum of the lengths without the current characters is taken.
+The final result is stored in scs[m][n], which represents the length of the shortest common supersequence of the entire strings X and Y.
