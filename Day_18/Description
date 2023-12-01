@@ -1,0 +1,20 @@
+Left Shifting and Combining:
+
+The loop iterates through the first half of the array.
+For each element at index i, it left-shifts the bits by 10 positions (arr[i] << 10).
+It then uses the bitwise OR (|) operator to combine the left-shifted bits with the corresponding element from the second half of the array (arr[n/2+i]).
+The result is stored back in the original position in the array.
+
+Separating and Right Shifting:
+
+The loop iterates through the first half of the array in reverse order.
+For each element at index i, it extracts the rightmost 10 bits using the bitwise AND (&) operation with (int)Math.pow(2,10) - 1.
+The result is stored in the array at the current index index--.
+It then right-shifts the bits by 10 positions (arr[i] >> 10).
+The result is stored in the array at the next index index--.
+This process separates and reconstructs the original values from the modified array.
+
+Result:
+
+After the two loops, the original array has been shuffled based on the described operations.
+The array is modified in place.
