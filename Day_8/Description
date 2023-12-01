@@ -1,0 +1,7 @@
+The code uses dynamic programming to calculate the count of distinct subsequences for each position in both str1 and str2. It uses two arrays, dp1 and dp2, to store these counts.
+
+The lastPos1 and lastPos2 arrays store the last position of each character encountered in str1 and str2, respectively. This information is used to update the count of distinct subsequences efficiently.
+
+The modulo operation is applied to avoid integer overflow during calculations.
+
+After calculating the counts for both strings, the code compares the counts at the last position (dp1[n] and dp2[n]). The string with a higher count is considered the "better" string, and that string is returned.
