@@ -1,0 +1,15 @@
+The function isSubset takes two arrays a1 and a2 as well as their respective lengths n and m as input parameters.
+
+It uses a HashMap called map to store the frequency of each element in array a1.
+
+The first for loop iterates through each element in array a1 and updates the frequency in the map.
+
+The second for loop iterates through each element in array a2.
+
+Inside the loop, it checks if the current element in a2 is present in a1 (i.e., it checks if the frequency in map is not null and greater than 0).
+
+If the element is not present or its frequency is 0, the function returns "No" indicating that a2 is not a subset of a1.
+
+If the element is present, it decrements its frequency in the map.
+
+If the function completes the second loop without returning "No," it means all elements in a2 are found in a1 with the required frequencies, and it returns "Yes."
