@@ -1,0 +1,22 @@
+Initialization:
+
+Three pointers are used: smaller, between, and larger.
+smaller: Points to the next position where an element less than a should be placed.
+between: Iterates through the array.
+larger: Points to the next position where an element greater than b should be placed.
+
+Partitioning:
+
+The while loop continues until the between pointer crosses the larger pointer.
+Three cases are considered inside the loop:
+If the element at between is less than a, swap it with the element at smaller, and move both pointers.
+If the element at between is between a and b (inclusive), move only the between pointer.
+If the element at between is greater than b, swap it with the element at larger and move the larger pointer.
+
+Final Result:
+
+After the loop, the array is partitioned into three parts as described above.
+
+Helper Method (swap):
+
+The swap method is used to swap two elements in the array.
