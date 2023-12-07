@@ -1,0 +1,15 @@
+Initialization:
+The code initializes variables to keep track of the product of all non-zero elements (product), an array to store the result (arr), and counts of zeros (zeroCount) and the index of the last zero encountered (zeroIndex).
+
+Iterating through the Array:
+The code iterates through the input array (nums), calculating the product of all non-zero elements and keeping track of the number and index of zeros.
+
+Handling Multiple Zeros:
+If there are more than one zero in the array (zeroCount > 1), the method returns an array of zeros as the result.
+
+Calculating the Final Result:
+If there are no zeros, the method calculates the result by dividing the product by the element at each index.
+If there is exactly one zero, the product is set to the element at the zero index.
+
+Returning the Result:
+The resulting array (arr) is returned as the final output.
