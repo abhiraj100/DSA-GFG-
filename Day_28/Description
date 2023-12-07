@@ -1,0 +1,19 @@
+HashMap Initialization:
+
+The code initializes a HashMap named map to store the count of occurrences for each element in the array.
+
+Calculate Minimum Required Count:
+
+It calculates the minimum required count (val) for an element to be considered appearing more than n/k times.
+
+Populating the HashMap:
+
+The code iterates through the input array arr and uses a HashMap to count the occurrences of each unique element.
+
+Counting Occurrences:
+
+The code then iterates through the entries of the HashMap and counts the elements that appear more than n/k times.
+
+Return the Result:
+
+The final count is returned as the output of the countOccurence method.
