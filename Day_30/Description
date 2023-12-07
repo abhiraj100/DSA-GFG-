@@ -1,0 +1,13 @@
+Sorting the Array:
+
+The Arrays.sort(arr) method is used to sort the input array arr in ascending order. Sorting is a common technique to arrange elements in a specific order.
+
+Calculating the Maximum Sum:
+
+A variable ans is initialized to store the sum of the products of array elements and their indices.
+The code then iterates through the sorted array. For each element, it calculates the product of the element and its index (arr[(int)i] * i) and adds it to the ans.
+The result is then taken modulo 1000000007 to keep it within a specific range and prevent overflow.
+
+Returning the Result:
+
+The final result is obtained by returning (int) ans % 1000000007. The casting to int is performed to ensure that the result is of integer type.
