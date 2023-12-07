@@ -1,0 +1,17 @@
+Initialization (Constructor):
+
+The class has three instance variables:
+arr: An integer array to store the elements of the two stacks.
+size: The maximum size of the array (assumed to be 100).
+top1 and top2: Pointers to the tops of stack1 and stack2, respectively.
+In the constructor (twoStacks), the array is initialized, and the top pointers are set to appropriate initial positions.
+
+Push Operations (push1 and push2):
+
+push1: Increments top1 and assigns the value x to the element at the updated position in the array, effectively pushing an element onto stack1.
+push2: Decrements top2 and assigns the value x to the element at the updated position in the array, effectively pushing an element onto stack2.
+
+Pop Operations (pop1 and pop2):
+
+pop1: Checks if stack1 is empty (top1 == -1). If not, it returns the element at the top of stack1 and decrements top1. If stack1 is empty, it returns -1.
+pop2: Checks if stack2 is empty (top2 == size). If not, it returns the element at the top of stack2 and increments top2. If stack2 is empty, it returns -1.
