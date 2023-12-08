@@ -1,0 +1,22 @@
+Class Declaration:
+
+The class is named Compute.
+
+Method Declaration:
+
+The class contains a static method named sortBySetBitCount.
+The method takes two parameters: an array of Integers (arr) and an integer (n), but the variable n is not used in the method body.
+
+Method Implementation:
+
+The body of the method uses Arrays.sort to sort the array arr.
+The sorting is done based on the number of set bits (number of '1' bits) in each element.
+The sorting is done in descending order, meaning the elements with a higher number of set bits will come first.
+
+Lambda Expression:
+
+The sorting is performed using a lambda expression (i1, i2) -> { return Integer.bitCount(i2) - Integer.bitCount(i1); }.
+The lambda expression takes two integers i1 and i2 as input parameters.
+Integer.bitCount(x) returns the number of one-bits (set bits) in the binary representation of x.
+The lambda expression compares the set bit count of i2 with that of i1 and returns the result.
+If the set bit count of i2 is greater than that of i1, it returns a negative value, indicating that i2 should come before i1 in the sorted array.
