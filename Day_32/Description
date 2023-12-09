@@ -1,0 +1,17 @@
+Sort the array in ascending order: 
+The Arrays.sort(a) method is used to sort the input array a in ascending order.
+
+Negate elements in the array: 
+The code then iterates through the array a while there are still negation operations to be performed (k > 0) and the current element is negative (a[i] < 0). It negates the current element (a[i] = -a[i]), decrements the value of k, and moves to the next element in the array.
+
+Handle remaining negations: 
+After the loop, if there are still remaining negations to be performed (k > 0), and the number of remaining negations is odd (k % 2 == 1), it means there is an odd number of negations left. In this case, the code sorts the array again and negates the first element (a[0] = -a[0]) to make the total number of negations even.
+
+Calculate the sum: Finally, the code calculates the sum of the modified array and returns the result.
+
+Here's the breakdown of the code logic:
+
+Sort the array in ascending order.
+Negate elements in the array until either all negations are used up or the current element is non-negative.
+If there are remaining negations and the count is odd, negate the smallest element.
+Calculate and return the sum of the modified array.
