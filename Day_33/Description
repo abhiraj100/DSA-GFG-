@@ -1,0 +1,14 @@
+Sorting the Array:
+The input array arr is sorted in ascending order. Sorting the array is a common practice in algorithmic problems, as it simplifies finding pairs or elements with certain properties.
+
+Dynamic Programming Array:
+An array dp of length N is created to store intermediate results. It is initialized with -1 for all elements. This array is used to memoize (store) results of subproblems to avoid redundant calculations.
+
+Iterating through the Array in Reverse Order:
+The loop iterates through the sorted array in reverse order, starting from the end.
+
+Nested Loop for Finding Pairs:
+Inside the outer loop, there is a nested loop that iterates through elements preceding the current element. It checks if the difference between the current element (arr[i]) and the preceding element (arr[j]) is less than K. If this condition is satisfied and the value in the dynamic programming array at index j is -1 (indicating that this pair hasn't been considered before), the sum of the pair is added to ans, and the dynamic programming array at index j is updated. The loop then breaks, as only one pair needs to be considered for each element.
+
+Returning the Result:
+The method returns the final accumulated sum of pairs that satisfy the given condition.
