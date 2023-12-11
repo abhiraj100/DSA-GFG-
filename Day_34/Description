@@ -1,0 +1,20 @@
+Method Signature:
+The method takes a single parameter str, which is a string from which duplicate characters need to be removed. It returns a new string with duplicates removed.
+
+Initialization:
+ans is a StringBuilder object used to build the result string without creating a new string object each time a character is added.
+st is a HashSet of characters, which is used to keep track of unique characters encountered so far.
+
+Processing:
+The first character of the input string str is added to the HashSet st, and the same character is appended to the StringBuilder ans. This ensures that the first character is always included in the result string.
+The loop starts from the second character (i=1) and iterates through the entire input string.
+For each character at index i in the input string:
+
+If the character is not already in the HashSet st, it means it's not a duplicate. In this case, the character is appended to the StringBuilder ans.
+The character is then added to the HashSet st to mark it as encountered.
+
+Return:
+The method returns the final result string obtained by calling toString() on the StringBuilder ans.
+
+Overall Purpose:
+The purpose of this code is to remove duplicate characters from the input string while maintaining the order of the characters in the original string. The HashSet st is used to keep track of unique characters, and the StringBuilder ans is used to construct the result string without duplicates.
