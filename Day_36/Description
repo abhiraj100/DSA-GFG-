@@ -1,0 +1,28 @@
+Here's an explanation of the code:
+
+Initialization: 
+Initialize two variables st and sum to 0, and a variable len to n+1. The variable st represents the start index of the current subarray, sum represents the sum of the current subarray, and len is used to track the length of the smallest subarray found so far.
+
+Loop through the array: 
+Use a for loop to iterate through the elements of the array.
+
+Update the sum: 
+Add the current element a[i] to the sum.
+
+Check if sum exceeds x:
+If the sum becomes greater than x, enter the if block.
+
+Adjust the subarray:
+Use a while loop to reduce the subarray length from the start (st) until the sum becomes less than or equal to x. Update the sum accordingly.
+
+Update the minimum length:
+Update the minimum length (len) by calculating the length of the current subarray (i-st+2). Take the minimum of the current length and the existing minimum length.
+
+Else block for adjusting the subarray from the start:
+If the sum is less than or equal to x and len is not equal to n+1 (meaning a subarray has been found previously), adjust the subarray from the start (st).
+
+Finalization:
+After the loop, check if len is still set to n+1, indicating that no subarray was found. If so, set len to 0.
+
+Return the result:
+Return the final value of len as the length of the smallest subarray with a sum greater than or equal to x.
