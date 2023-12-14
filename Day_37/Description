@@ -1,0 +1,17 @@
+Explanation:
+
+Queues Initialization:
+
+Two queues, pos and neg, are initialized using the LinkedList class. pos is meant to store positive integers, and neg is meant to store negative integers.
+
+Separating Positive and Negative Integers:
+
+A loop is used to iterate through the array arr[].
+If the current element is non-negative, it is added to the pos queue. Otherwise, it is added to the neg queue.
+
+Merging Alternately:
+
+A while loop is used to iterate through the array arr[] again.
+If the pos queue is not empty, a positive integer is polled from the queue and added to the array.
+If the neg queue is not empty and there is space in the array, a negative integer is polled from the neg queue and added to the array.
+This process continues until the array is filled with positive and negative integers alternatively.
