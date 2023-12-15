@@ -1,0 +1,18 @@
+Explanation of the code step by step
+
+String prefix = arr[0];: 
+The function initializes a variable prefix with the first string in the array (arr[0]). This is used as a starting point for finding the common prefix.
+
+for(int i = 1; i < n; i++): 
+This loop starts from the second string in the array (arr[1]) and goes up to the last string (arr[n-1]).
+
+while(arr[i].indexOf(prefix) != 0): 
+Inside the loop, there's a while loop that checks whether the current string (arr[i]) starts with the current prefix. The indexOf method returns the starting index of the substring in the given string. If the prefix is not a prefix of the current string, the loop shortens the prefix by removing the last character until it becomes a prefix.
+
+The while loop essentially adjusts the prefix to be a common prefix for the current pair of strings.
+
+if(prefix.length() == 0) return "-1";:
+After the loop, if the final prefix length is zero, it means there is no common prefix among all the strings. In this case, the function returns "-1" to indicate that there is no common prefix.
+
+return prefix;:
+If there is a common prefix, the function returns the final prefix.
