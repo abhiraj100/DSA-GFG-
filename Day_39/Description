@@ -1,0 +1,22 @@
+Explanation:
+
+HashMap Initialization:
+Map<Integer, Integer> seen = new HashMap<>();: A HashMap named seen is created to keep track of the frequency of each element in the array. The key represents the array element, and the value represents the frequency.
+
+Count Initialization:
+int count = 0;: The variable count is initialized to 0. This variable will be used to store the count of pairs whose sum is equal to the given target k.
+
+Main Loop:
+for (int num : arr) {: The code iterates through each element (num) in the input array arr.
+
+Calculating Complement:
+int complement = k - num;: For each element, it calculates the complement needed to achieve the target sum k.
+
+Checking for Complement in HashMap:
+if (seen.containsKey(complement)) { count += seen.get(complement); }: If the complement is present in the seen map, it means that a pair is found. The count is incremented by the frequency of the complement.
+
+Updating Frequency in HashMap:
+seen.put(num, seen.getOrDefault(num, 0) + 1);: The frequency of the current element num is updated in the seen map.
+
+Returning the Result:
+return count;: The method returns the final count of pairs whose sum is equal to the given target k.
