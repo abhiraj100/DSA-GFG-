@@ -1,0 +1,12 @@
+Explanation of the code :
+
+mergeHeaps Method:
+This method takes two arrays (a and b) along with their lengths (n and m) and merges them into a new array result.
+It copies the elements of arrays a and b into result.
+Then, it builds a heap from the merged array using the heapify method.
+
+heapify Method:
+This method is responsible for maintaining the heap property of the array.
+It takes an array arr, its size n, and an index i as input.
+It identifies the largest element among the root, left child, and right child.
+If the largest element is not the root, it swaps the root with the largest child and recursively calls heapify on the affected subtree.
