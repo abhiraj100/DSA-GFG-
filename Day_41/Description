@@ -1,0 +1,24 @@
+Explanation
+
+Class Declaration:
+class Complete: Defines a class named Complete.
+
+Method Declaration:
+public static int search(int arr[], int n, int x, int k): This method takes four parameters:
+arr: an array of integers.
+n: the number of elements in the array.
+x: the value to search for in the array.
+k: a variable (not used in the provided code).
+
+Method Implementation:
+The method uses a simple for loop to iterate through the array.
+Inside the loop, it checks if the current element (arr[i]) is equal to the value x.
+If a match is found, it returns the index i where the match is found.
+If no match is found after iterating through the entire array, it returns -1.
+
+Return Values:
+If the value x is found in the array, the method returns the index of its first occurrence.
+If the value x is not found in the array, the method returns -1.
+
+Note:
+The parameter k is declared but not used within the method. It seems to be unnecessary for the current implementation.
