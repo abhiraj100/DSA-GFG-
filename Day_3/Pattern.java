@@ -1,16 +1,23 @@
-class Solution{
+/*
+Given a pattern containing only I's and D's. I for increasing and D for decreasing. Devise an algorithm to print the minimum number following that pattern. Digits from 1-9 and digits can't repeat.
 
-  
+Example 1:
+
+Input:
+D
+Output:
+21
+*/
+
+class Pattern{
     public static String printMinNumberForPattern(String pattern) {
         int n = pattern.length() + 1;
         int[] result = new int[n];
 
-        // Initialize the result array with increasing order
         for (int i = 0; i < n; i++) {
             result[i] = i + 1;
         }
 
-        // Process the pattern to generate the minimum number
         for (int i = 0; i < n - 1; i++) {
             if (pattern.charAt(i) == 'D') {
                 int start = i;
@@ -21,7 +28,6 @@ class Solution{
             }
         }
 
-        // Convert the result array to a string
         StringBuilder sb = new StringBuilder();
         for (int num : result) {
             sb.append(num);
@@ -44,7 +50,6 @@ class Solution{
         String pattern = "IDID";
         String output = printMinNumberForPattern(pattern);
 
-        // Print the result
         System.out.println(output);
     }
 }
