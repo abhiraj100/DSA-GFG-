@@ -1,17 +1,25 @@
-class Solution {
+/*
+Given a pair of strings of equal lengths, Geek wants to find the better string. The better string is the string having more number of distinct subsequences.
+If both the strings have equal count of distinct subsequence then return str1.
+
+Example 1:
+
+Input:
+str1 = "gfg", str2 = "ggg"
+Output: "gfg"
+*/    
+
+class String {
     static String betterString(String str1, String str2) {
         int mod = 1000000007;
         int n = str1.length();
 
-        // Arrays to store the last position of each character in both strings
         int[] lastPos1 = new int[256];
         int[] lastPos2 = new int[256];
 
-        // Initialize last positions with -1
         Arrays.fill(lastPos1, -1);
         Arrays.fill(lastPos2, -1);
-
-        // Arrays to store the count of distinct subsequences at each position
+        
         int[] dp1 = new int[n + 1];
         int[] dp2 = new int[n + 1];
 
@@ -34,7 +42,6 @@ class Solution {
             lastPos2[str2.charAt(i - 1)] = i;
         }
 
-        // Compare the counts and return the better string
         if (dp1[n] >= dp2[n]) {
             return str1;
         } else {
