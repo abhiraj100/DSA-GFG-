@@ -1,0 +1,15 @@
+Explanation:
+
+Arrays.sort(Arr);: This line sorts the input array Arr in ascending order.
+
+Calculate the total sum of the elements in the array using the for loop: for (int i = 0; i < N; i++) ans += Arr[i];
+Initialize variables c and dum to keep track of the count of elements and the sum of elements, respectively.
+The second for loop runs from the end of the sorted array to the second element (for (int j = N - 1; j > 0; j--)).
+
+In each iteration of the loop:
+Subtract Arr[j] from ans (remaining sum after removing the current element).
+Add Arr[j] to dum (running sum of removed elements).
+Increment the count c.
+Check if dum (sum of removed elements) becomes greater than ans (remaining sum). If true, return the count c. This is the point where the sum of the right subset becomes greater than the remaining sum on the left.
+
+If the loop completes without meeting the condition, return 1, indicating that the minimum subset size is 1.
