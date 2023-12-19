@@ -1,0 +1,23 @@
+Explanation:
+
+Class Declaration:
+The code defines a class named Solution.
+
+Method Declaration:
+The class contains a method named findMinSum that takes three parameters:
+A: an array of integers.
+B: another array of integers.
+N: an integer representing the size of the arrays.
+
+Variable Declaration:
+The method declares a variable sum of type long and initializes it to 0. This variable will be used to store the cumulative sum of absolute differences between corresponding elements of arrays A and B.
+
+Sorting Arrays:
+The Arrays.sort(A) and Arrays.sort(B) statements sort the arrays A and B in ascending order.
+
+Calculating Sum:
+The code then enters a loop that iterates from i=0 to i<N-1.
+Inside the loop, it calculates the absolute difference between the i-th elements of arrays A and B using Math.abs(A[i] - B[i]) and adds this value to the sum.
+
+Returning Result:
+Finally, the method returns the computed sum.
