@@ -1,6 +1,16 @@
-class Solution
+/*
+Given two strings X and Y of lengths m and n respectively, find the length of the smallest string which has both, X and Y as its sub-sequences.
+Note: X and Y can have both uppercase and lowercase letters.
+
+Example 1
+
+Input:
+X = abcd, Y = xycd
+Output: 6
+*/    
+
+class String
 {
-    //Function to find length of shortest common supersequence of two strings.
     public static int shortestCommonSupersequence(String X,String Y,int m,int n)
     {
            int[][] scs = new int[m + 1][n + 1];
