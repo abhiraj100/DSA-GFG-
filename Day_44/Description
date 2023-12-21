@@ -1,0 +1,19 @@
+Explanation
+
+Function Signature:
+The function takes a 2D array M representing the relationship matrix of people in a party, where M[i][j] is 1 if person i knows person j, and 0 otherwise. n is the number of people in the party.
+
+Initialize Stack:
+A stack pc is initialized with numbers from 0 to n-1, representing the indices of people in the party.
+
+Elimination Loop:
+In this loop, pairs of people are popped from the stack, and one of them is eliminated based on their relationship. If M[person1][person2] == 1, it means person1 knows person2, so person1 is not a celebrity, and person2 is pushed back onto the stack. If M[person1][person2] == 0, it means person1 does not know person2, so person2 is not a celebrity, and person1 is pushed back onto the stack.
+
+Retrieve Candidate:
+After the elimination loop, the remaining person in the stack is a potential candidate for being a celebrity.
+
+Verification Loop:
+The code then checks if the candidate is indeed a celebrity by verifying that everyone else knows the candidate (M[candidate][i] == 1) and the candidate knows no one (M[i][candidate] == 0). If these conditions are not met for any person i, the candidate is not a celebrity, and -1 is returned.
+
+Return Result:
+If the candidate passes the verification, the function returns the index of the celebrity; otherwise, it returns -1.
