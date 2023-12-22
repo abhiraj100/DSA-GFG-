@@ -1,0 +1,13 @@
+Explanation :
+
+The function minSwaps takes an array of integers as input.
+
+It creates a copy of the input array (temp) and sorts it. This sorted array will be used to determine the correct order.
+
+A HashMap (map) is created to store the index of each element in the original array.
+
+The function iterates through the array and checks if the current element is in the correct position. If not, it swaps the elements to move towards the correct order.
+
+The number of swaps is counted, and the index of each element in the original array is updated in the HashMap.
+
+The function returns the minimum number of swaps required to make the array sorted.
