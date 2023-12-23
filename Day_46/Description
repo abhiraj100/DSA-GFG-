@@ -1,0 +1,13 @@
+Explanation:
+
+Class Definition: The code defines a class named Solution.
+
+Method Signature: The class contains a static method named mergeKArrays, which takes two parameters: a 2D array arr representing k sorted arrays, and an integer K representing the size of each array.
+
+ArrayList Initialization: An ArrayList<Integer> named list is created to store the merged elements.
+
+Nested Loop to Flatten 2D Array: Two nested for loops are used to iterate over each element in the 2D array. The outer loop (i) iterates over the rows, and the inner loop (j) iterates over the columns. The elements from the 2D array are added to the ArrayList (list) one by one.
+
+Sorting the ArrayList: After adding all elements to the ArrayList, the Collections.sort() method is used to sort the elements in ascending order.
+
+Return Sorted ArrayList: The sorted ArrayList is then returned.
