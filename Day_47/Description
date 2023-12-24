@@ -1,0 +1,13 @@
+Explanation:
+
+The possibleWords method initializes a HashMap (hm) that maps each digit to a string of characters associated with that digit on a phone keypad.
+
+An ArrayList (ans) is used to store the generated words.
+
+The find method is a recursive helper method that explores all possible combinations of characters for each digit.
+
+The base case of the recursion is reached when all digits are processed (count == n). At this point, a word is constructed using the characters at the current indices for each digit and added to the ans list.
+
+The method uses a loop to iterate through the characters associated with the current digit and makes recursive calls to explore combinations for the next digits.
+
+The final list of generated words is returned.
