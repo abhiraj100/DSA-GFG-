@@ -1,0 +1,13 @@
+Explanation:
+
+Leftmax Array Calculation:
+This loop calculates the maximum height of the block to the left of each element in the array. leftmax[i] represents the maximum height to the left of the block at position i.
+
+Rightmax Array Calculation:
+Similar to the leftmax array, this loop calculates the maximum height of the block to the right of each element in the array. rightmax[i] represents the maximum height to the right of the block at position i.
+
+Trapped Water Calculation:
+This loop calculates the trapped water at each block. It finds the minimum height of the maximum heights on the left and right (waterLevel) and subtracts the height of the current block (arr[i]). The result is added to the total trapped water.
+
+Return Result:
+Finally, the total trapped water is returned by the function.
