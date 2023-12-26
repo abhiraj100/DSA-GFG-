@@ -1,0 +1,8 @@
+Explanation:
+
+The stockBuySell method iterates through the array of stock prices.
+It identifies potential buying days and updates the buyIndex.
+It also tracks potential selling days and updates the sellIndex.
+If it reaches the last day, it adds the buying and selling days to the list.
+If the price decreases, it adds the buying and selling days to the list and resets the buyIndex.
+The addToList method adds the buying and selling days to the list if there is an ongoing buying process.
