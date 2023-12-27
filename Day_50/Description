@@ -1,0 +1,17 @@
+Explanation:
+
+long maxSubarraySum(int arr[], int n): This is the method signature. It takes an array of integers arr and its size n as input and returns a long representing the sum of the contiguous subarray with the maximum sum.
+
+long maxSum = Integer.MIN_VALUE;: Initialize maxSum to the minimum possible integer value. This variable will be used to keep track of the maximum sum found during the iteration.
+
+long currSum = 0;: Initialize currSum to 0. This variable represents the current sum of the contiguous subarray being considered.
+
+The for loop iterates through each element of the array.
+
+currSum += arr[i];: Add the current element to the current sum.
+
+maxSum = Math.max(maxSum, currSum);: Update maxSum with the maximum of its current value and the current sum. This ensures that maxSum always stores the maximum sum encountered so far.
+
+if(currSum < 0) { currSum = 0; }: If the current sum becomes negative, reset it to 0. This step is crucial for finding the maximum sum of contiguous subarrays, as it effectively "restarts" the subarray if the current sum becomes negative.
+
+Finally, the method returns the calculated maxSum, representing the maximum sum of a contiguous subarray in the input array.
