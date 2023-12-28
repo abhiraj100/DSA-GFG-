@@ -1,0 +1,16 @@
+Explanation:
+
+HashMap Initialization:
+This line declares and initializes a HashMap named track. It is used to keep track of the frequency of each element in the array.
+
+Variables Initialization:
+This line initializes a variable ans to -1. This variable will be used to store the majority element if found.
+
+Iterating through the Array:
+This loop iterates through the given array a and updates the frequency of each element in the track HashMap.
+
+Finding the Majority Element:
+This loop iterates through the keys of the track HashMap and checks if the frequency of any element is greater than half of the array size (size/2). If so, it updates the ans variable with the current key, indicating a potential majority element.
+
+Returning the Result:
+Finally, the method returns the ans variable, which contains the majority element if one is found. If no majority element is found, the method returns -1.
