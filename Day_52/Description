@@ -1,0 +1,20 @@
+Explanation:
+
+Input Reading:
+The code starts by reading the number of test cases t.
+For each test case, it reads the size of the array n and the array elements arr.
+
+Solution Class:
+The Solution class contains the static method inversionCount that takes the array arr and its size N as parameters.
+It initializes low and high to represent the range of the array and calls the recursive inv method.
+
+Recursive Function (inv):
+The inv function is a recursive function that implements a modified merge sort.
+It calculates the number of inversions in the array by dividing it into two halves and recursively counting inversions in each half.
+It also calls the countMerge function to count the inversions between the two halves.
+
+Counting Merges (countMerge):
+The countMerge function is responsible for counting the inversions between the two halves of the array during the merge step.
+It uses additional arrays left and right to store the elements of the two halves.
+The merging is done while counting the inversions, and the merged array is updated in-place.
+
