@@ -1,0 +1,21 @@
+Explanation :
+
+Sorting Array A:
+The first step is to sort the array A[] in ascending order. Sorting is crucial for efficiently searching for triplets, as it simplifies the process of finding the triplet sum.
+
+Iterating Through Array:
+The outer loop (for loop with index i) iterates through each element of the array.
+
+Two Pointers Technique:
+Inside the outer loop, two pointers (j and k) are initialized. These pointers represent two positions in the array, one starting from the next element after i (denoted by j), and the other starting from the end of the array (denoted by k).
+
+Triplet Sum Check:
+The code then enters a while loop that continues until j is less than k.
+Within the loop, it checks if the sum of elements at indices i, j, and k is equal to the given target sum X.
+If the sum is equal to X, it means a triplet has been found, and the function returns true.
+If the sum is less than X, it increments j to explore larger values.
+If the sum is greater than X, it decrements k to explore smaller values.
+
+Return False if No Triplet is Found:
+If the while loop completes without finding a triplet, the outer loop continues to the next iteration.
+If no triplet is found after iterating through all elements, the function returns false.
