@@ -1,0 +1,22 @@
+Explanation :
+
+Method Signature:
+spirallyTraverse is a static method that takes three parameters:
+matrix: a 2D array representing the matrix to be traversed.
+r: an integer representing the number of rows in the matrix.
+c: an integer representing the number of columns in the matrix.
+The return type is an ArrayList<Integer> containing the elements of the matrix in spiral order.
+
+Initialization:
+ans is an ArrayList to store the result.
+sr, lr, sc, and lc represent the starting and ending indices for rows and columns, initialized based on the matrix dimensions.
+t is the total number of elements in the matrix.
+count is used to keep track of the number of elements added to the result.
+
+Spiral Traversal:
+The while loop continues until all elements are added to the result.
+Four for loops traverse the matrix in four directions (right, down, left, up), and elements are added to the ans ArrayList.
+After each traversal, corresponding start or end indices are updated to shrink the traversal boundaries.
+
+Result:
+The ArrayList containing the spiral traversal elements is returned.
