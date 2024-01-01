@@ -1,0 +1,15 @@
+Explanation :
+
+The function max_of_subarrays takes an array arr, its length n, and the size of the subarrays k as input.
+
+It initializes an empty ArrayList called list to store the maximum elements of each subarray.
+
+The outer loop (for loop with variable i) iterates through each possible starting index of a subarray of size K. It goes up to n - k to ensure that the entire subarray of size K can be considered.
+
+Inside the outer loop, there is an inner loop (for loop with variable j) that iterates through the elements of the current subarray starting from index i+1 (as max is already initialized with arr[i]).
+
+Within the inner loop, the code compares each element with the current maximum (max) and updates max if a larger element is found using Math.max.
+
+After iterating through the inner loop, the maximum element of the current subarray is added to the list.
+
+The function continues this process for all possible subarrays, and the final result is the list containing the maximum elements of each subarray.
