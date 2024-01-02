@@ -1,0 +1,26 @@
+Explanation : 
+
+Function Signature:
+The function findPlatform takes three parameters:
+arr: An array representing the arrival times of trains.
+dep: An array representing the departure times of trains.
+n: The number of trains.
+
+Sorting Arrays:
+The Arrays.sort method is used to sort both the arr (arrival times) and dep (departure times) arrays in ascending order. Sorting is essential for the algorithm to work correctly.
+
+Initializing Variables:
+max: Keeps track of the maximum number of platforms needed at any point.
+count: Maintains the current number of platforms in use.
+p: Index for iterating through the arrival times array (arr).
+d: Index for iterating through the departure times array (dep).
+
+Main Loop:
+The main loop continues until either the arrival array (arr) or the departure array (dep) is fully processed.
+
+Checking Arrival and Departure Times:
+If the current arrival time is less than or equal to the current departure time, it means a train has arrived but not departed. In this case, we increment the count (number of platforms in use), move to the next arrival time (p++), and update the max if the current count is greater than the current max.
+If the current arrival time is greater than the current departure time, it means a train has departed. In this case, we decrement the count (a platform is now available), and move to the next departure time (d++).
+
+Result:
+The function returns the maximum number of platforms required to handle the trains without any conflicts.
