@@ -1,0 +1,13 @@
+Explanation:
+
+The function FindMaxSum takes an array arr and its length n as input.
+
+It initializes two variables a and b to represent the maximum money the thief can get when considering whether to rob the current house or skip it.
+
+The loop starts from the third house (i = 2) since the maximum money for the first two houses is directly assigned to a and b during initialization.
+
+Inside the loop, it calculates the maximum money k that the thief can get by choosing between robbing the current house or skipping it.
+
+It updates the values of a and b for the next iteration.
+
+After the loop, it returns the maximum money the thief can get by considering the last two houses (Math.max(a, b)).
