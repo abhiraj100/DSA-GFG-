@@ -1,0 +1,13 @@
+Explanation :
+
+import java.util.Arrays;: This line imports the Arrays class from the java.util package. The Arrays class provides utility methods for working with arrays, and in this case, it is used to sort the array.
+
+class Solution {: This declares a class named Solution.
+
+public static void sort012(int a[], int n) {: This declares a public static method named sort012 that takes an integer array a and an integer n as parameters.
+
+// code here: A comment indicating where the main logic of the method should be.
+
+Arrays.sort(a);: This line uses the Arrays.sort method to sort the array a in ascending order. The sorting is based on the natural ordering of its elements.
+
+}: Closing brace for the sort012 method.
