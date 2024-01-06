@@ -1,0 +1,26 @@
+Explanation :
+
+Method Signature:
+The method takes four parameters:
+
+arr: The input array of integers.
+l: The left index of the current subarray being considered.
+r: The right index of the current subarray being considered.
+k: The desired position of the element to find (1-based index).
+
+Sorting the Array:
+The array arr is sorted in ascending order using the Arrays.sort() method. Sorting the array makes it easier to find the kth smallest element.
+
+Binary Search:
+The code uses a binary search-like approach to efficiently find the kth smallest element in the sorted array.
+
+Midpoint Calculation:
+The midpoint mid of the current subarray is calculated using the formula (l + r) / 2. This prevents overflow issues when calculating the midpoint.
+
+Comparison and Adjustment of Subarray Boundaries:
+If mid is equal to k - 1, then the element at the mid index is the kth smallest element, and the method returns that element.
+If mid is less than k - 1, it means that the kth smallest element lies in the right half of the current subarray. So, the left boundary l is adjusted to mid + 1.
+If mid is greater than k - 1, it means that the kth smallest element lies in the left half of the current subarray. So, the right boundary r is adjusted to mid - 1.
+
+Return Result:
+The method returns the element at the l index, which corresponds to the kth smallest element in the original array.
