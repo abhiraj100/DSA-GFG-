@@ -1,0 +1,28 @@
+Explanation :
+
+HashMap Usage:
+
+The function uses a HashMap<Long, Integer> named map to store the cumulative sum encountered so far (sum) as keys and the count of occurrences of each sum as values.
+The sum variable is used to calculate the cumulative sum while iterating through the array.
+
+Iterating through the Array:
+
+The code iterates through the given array using a for loop from index 0 to n-1.
+For each element in the array, it updates the cumulative sum (sum) and checks whether this sum is already present in the map.
+If the sum is not present, it adds an entry with the sum as the key and sets the value to 1.
+If the sum is already present, it increments the count (value) associated with that sum.
+
+Calculating Subarray Counts:
+
+After iterating through the array, the code uses a for-each loop to iterate through the entries in the map.
+For each entry, it retrieves the count of occurrences of the sum and calculates the number of subarrays with a sum equal to 0.
+It adds the calculated count to the variable ans.
+
+Returning the Result:
+
+The function returns the final count of subarrays with a sum equal to 0 (ans).
+
+Explanation of Calculation:
+
+For a sum of 0, the code calculates the number of subarrays using the formula ((val) * (val + 1)) / 2, where val is the count of occurrences of the sum.
+For sums other than 0, it uses the formula ((val - 1) * val) / 2.
