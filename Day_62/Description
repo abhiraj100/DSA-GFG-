@@ -1,0 +1,10 @@
+Explanation :
+
+The first loop iterates through the array. For each element, it calculates the index by subtracting 1 (since the array is 1-indexed), and then it checks if the element at that index is positive. If positive, it means the element is encountered for the first time, so it is marked as negative. If negative, it means the element has been encountered before, and it is the repeating element.
+
+After marking the repeating element, the second loop iterates through the array again to find the missing element. It looks for the first positive element, and its index + 1 is the missing element.
+
+Finally, the function returns an array containing the repeating and missing elements.
+
+
+
