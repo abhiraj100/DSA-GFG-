@@ -1,0 +1,14 @@
+Explanation :
+
+Initialization:
+maxProductLeft and maxProductRight are initialized to Integer.MIN_VALUE. These variables will store the maximum product of subarrays on the left and right sides of the array.
+curProductLeft and curProductRight are initialized to 1. These variables will store the current product of subarrays on the left and right sides as the iteration progresses.
+
+Iterating through the array:
+The code uses two pointers, i starting from 0 and j starting from n-1, and iterates through the array in a single loop.
+curProductLeft and curProductRight are updated by multiplying the current element with the respective product.
+maxProductLeft and maxProductRight are updated to store the maximum of the current product and the previous maximum product.
+If the current product becomes zero, it is reset to 1. This is done to handle cases where zero is encountered in the array, and the product needs to be reset for the next subarray.
+
+Return the maximum product:
+Finally, the method returns the maximum of maxProductLeft and maxProductRight.
