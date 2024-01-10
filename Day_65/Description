@@ -1,0 +1,20 @@
+Explanation :
+
+Initialization: 
+The function starts by initializing two pointers, pointer1 and pointer2, both initially set to 0. pointer1 is used to keep track of the position where the next negative number should be placed, and pointer2 is used to iterate through the array.
+
+Iteration through the array: 
+The code uses a for loop to iterate through the array from the beginning to the end.
+
+Checking for negative numbers: 
+Inside the loop, it checks if the current element at index pointer2 is negative.
+
+Rearranging the array: 
+If the current element is negative and pointer1 is different from pointer2, it means there are positive numbers before the current negative number. In this case, it shifts the elements between pointer1 and pointer2 (exclusive) one position to the right and places the current negative number at position pointer1.
+This effectively moves the negative number to its correct position while shifting the positive numbers to the right.
+
+Updating pointer1: 
+Regardless of whether the rearrangement is performed or not, pointer1 is incremented to prepare for the next negative number.
+
+Final Result: 
+After the loop completes, the array a will be rearranged such that all negative numbers appear at the beginning, and the relative order of positive numbers is maintained.
