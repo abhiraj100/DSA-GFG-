@@ -1,0 +1,98 @@
+Explanation :
+
+/*
+class Solution {
+    int[] kLargest(int[] arr, int n, int k) {
+        // code here
+        int[] ans = new int[k];
+        Arrays.sort(arr);
+        int j = 0;
+        int l = n - 1;
+        while (j != k && l >= 0) {
+            ans[j++] = arr[l--];
+        }
+        return ans;
+    }
+}
+
+*/
+
+Method Signature:
+
+int[] kLargest(int[] arr, int n, int k): This method takes three parameters - an array of integers (arr), the size of the array (n), and the value of k indicating how many largest elements are to be returned. The method returns an array of integers.
+Initializing Result Array:
+
+int[] ans = new int[k];: A new array (ans) is created with a size of k. This array will store the k largest elements.
+
+Sorting the Input Array:
+
+Arrays.sort(arr);: The input array arr is sorted in ascending order. This helps in identifying the largest elements easily.
+
+Extracting k Largest Elements:
+
+int j = 0; int l = n - 1;: Two pointers are initialized - j starting from 0 and moving forward, and l starting from the last index of the sorted array and moving backward.
+while (j != k && l >= 0): The loop continues until j becomes equal to k or l becomes less than 0.
+ans[j++] = arr[l--];: In each iteration, the value at index l (which points to the largest elements in the sorted array) is assigned to ans[j], and both j and l are updated.
+
+Returning Result Array:
+
+return ans;: The array containing the k largest elements is returned.
+
+
+/*
+class Solution{
+    int longSubarrWthSumDivByK(int a[], int n, int k)
+    {
+        //contain reminder and it's position 
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int maxLength = Integer.MIN_VALUE;
+        map.put(0,-1);
+        int sum = 0;
+        int reminderSum=0;
+        for(int i=0;i<n;i++){
+            sum += a[i];
+            reminderSum = sum%k;
+            if(reminderSum<0){
+                reminderSum += k;
+            }
+            if(!map.containsKey(reminderSum)){
+                map.put(reminderSum,i);
+            }else{
+                maxLength = Math.max(maxLength,i-map.get(reminderSum));
+            }
+        }
+        
+        return (maxLength==Integer.MIN_VALUE)?0:maxLength;
+    }
+}
+*/
+
+Method Signature:
+
+int longSubarrWthSumDivByK(int a[], int n, int k): This method takes three parameters - an array of integers (a), the size of the array (n), and an integer k. The method returns an integer representing the length of the longest subarray with a sum divisible by k.
+
+Initializing Data Structures:
+
+HashMap<Integer, Integer> map = new HashMap<>();: A HashMap is used to store the remainder of the sum at each position and its corresponding position.
+
+Handling Edge Case:
+
+map.put(0, -1);: To handle the case where the sum is divisible by k, the initial entry of the map is set with a remainder of 0 and position -1.
+
+Iterating Through the Array:
+
+for (int i = 0; i < n; i++) {: The code iterates through the given array.
+Calculating Reminder and Adjusting for Negatives:
+
+sum += a[i];: The variable sum keeps track of the cumulative sum of the elements.
+reminderSum = sum % k;: The remainder of the current sum divided by k is calculated.
+if (reminderSum < 0) { reminderSum += k; }: If the remainder is negative, it is adjusted to be positive by adding k. This ensures that the remainder is within the range [0, k-1].
+
+Updating HashMap:
+
+if (!map.containsKey(reminderSum)) { map.put(reminderSum, i); }: If the current remainder is not present in the map, its position is added to the map.
+else { maxLength = Math.max(maxLength, i - map.get(reminderSum)); }: If the current remainder is already in the map, the length of the subarray with the sum divisible by k is calculated and compared with the maximum length seen so far.
+
+Returning Result:
+
+return (maxLength == Integer.MIN_VALUE) ? 0 : maxLength;: The length of the longest subarray with a sum divisible by k is returned. If no such subarray is found, 0 is returned.
