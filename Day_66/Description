@@ -1,0 +1,13 @@
+Explanation :
+
+Initialization:
+Here, a HashSet hs is created to store unique characters in the input string str. The for loop iterates through the string and adds each character to the HashSet.
+
+Sliding Window:
+
+Sliding Window Logic:
+The while loop runs as long as the window contains all unique characters (hm.size() == hs.size()) and j is within the bounds of the string.
+Inside the loop, it updates the count of the character at position j and checks if the count becomes zero. If it does, it removes the character from the HashMap, updating the minimum length of the substring (ans).
+
+Result:
+The function returns the minimum length of the substring that contains all distinct characters.
