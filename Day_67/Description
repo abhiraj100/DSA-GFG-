@@ -1,0 +1,20 @@
+Explanation :
+
+Initialize three pointers i, j, and l to 0. i and j represent the current positions in arr1 and arr2 respectively, and l keeps track of the count of elements processed.
+
+Use a while loop to iterate until the kth element is found or one of the arrays is exhausted.
+
+Compare elements at the current positions in arr1 and arr2.
+
+If the element in arr1 is smaller, check if it's the kth element. If yes, return it. Otherwise, move to the next element in arr1 and increment the count l.
+
+If the element in arr2 is smaller, check if it's the kth element. If yes, return it. Otherwise, move to the next element in arr2 and increment the count l.
+
+If one of the arrays is exhausted, but the kth element is not reached, continue searching in the remaining part of the non-exhausted array.
+
+Finally, if the kth element is not found in the merged arrays, return 0.
+
+
+
+
+
