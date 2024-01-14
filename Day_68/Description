@@ -1,0 +1,21 @@
+Explanation :
+
+long total = 0;: Initializes a variable total to keep track of the count of triplets that satisfy the given condition.
+
+Arrays.sort(arr);: Sorts the input array arr in ascending order. Sorting the array is a crucial step for the algorithm to work efficiently.
+
+The method then enters a loop that iterates over each element of the array using the index i:
+
+Inside the loop, two pointers (l and r) are initialized. The l pointer starts at i + 1, and the r pointer starts at the last element of the array (n - 1).
+
+The method enters another loop using a while loop, which continues until l is less than r.
+
+Inside the while loop, the code checks if the sum of the elements at indices i, l, and r is less than the target sum (sum). If true, it means that all triplets with the current i and l values and any r value between l and r would satisfy the condition.
+
+If the sum is less than the target, it increments the total count by the difference between r and l, and then increments l. This is because if the current triplet satisfies the condition, then all triplets with the same i and l but a different r value would also satisfy the condition.
+
+If the sum is not less than the target, it decrements the r pointer, trying a smaller value of arr[r] to see if the sum becomes smaller.
+
+After the while loop, the outer loop increments the i index, and the process repeats for the next element in the array.
+
+Finally, the method returns the total count of triplets that satisfy the given condition.
