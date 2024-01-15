@@ -1,0 +1,18 @@
+Explanation :
+
+solve method:
+It takes an array of integers arr and an integer n as input parameters.
+It sorts the array arr in ascending order using Arrays.sort(arr).
+Two StringBuilder objects, a and b, are initialized to store alternate elements from the sorted array.
+The for loop iterates through the sorted array, appending elements to a if the index i is odd, and to b if the index i is even.
+After the loop, it calls the sum method with the reversed a and b as arguments and stores the result in the variable sum.
+Finally, it returns the computed sum.
+
+sum method:
+It takes two StringBuilder objects, a and b, as input parameters.
+It determines the maximum length between a and b and stores it in the variable len.
+It initializes variables for carrying, a temporary StringBuilder for the result (temp), and iterators i and j.
+The while loop iterates through each digit position until there are no more digits in both a and b, and there is no carry left.
+At each iteration, it extracts the digits from a and b at the current position (or assumes 0 if no digit is available), adds them along with the carry, updates the carry and appends the sum to the temp StringBuilder.
+After the loop, it reverses the temp StringBuilder and removes leading zeros.
+If the resulting string is all zeros, it returns "0"; otherwise, it returns the substring without leading zeros.
