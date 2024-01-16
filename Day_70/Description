@@ -1,0 +1,25 @@
+Explanation :
+
+Initialize variables:
+
+ans: This variable stores the final count of subarrays with a product less than k.
+product: This variable represents the product of the elements in the current subarray.
+i and j: These variables are pointers that define the current subarray. i represents the starting index of the subarray, and j represents the ending index.
+Use a while loop to iterate through the array with the help of the j pointer.
+
+Inside the loop, calculate the product of the current subarray by multiplying product with the element at index j (product *= a[j]).
+
+Check if the product is less than k:
+
+If true, increment the ans by the length of the current subarray (j - i + 1), as all subarrays starting from index i to j would satisfy the condition of having a product less than k. Then, increment the j pointer.
+If the product is not less than k, enter the else block:
+
+Use a nested while loop to move the i pointer until the product becomes less than k. Adjust the product by dividing it by the element at index i (product /= a[i]).
+Increment i to move to the next subarray.
+After exiting the inner while loop, check if i is still less than or equal to j (ensuring that i does not cross j):
+
+If true, and if k is not equal to 0, increment ans by the length of the subarray (j - i + 1).
+Increment the j pointer to move to the next subarray.
+Continue this process until the j pointer reaches the end of the array.
+
+Return the final count of subarrays stored in the ans variable.
