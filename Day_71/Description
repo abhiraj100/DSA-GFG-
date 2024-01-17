@@ -1,0 +1,10 @@
+Explanation : 
+
+coins: An array representing the different coin denominations.
+N: The number of coins available.
+sum: The target sum that needs to be achieved.
+The method uses dynamic programming to solve the problem. It creates a 2D array dp of size (N+1) x (sum+1) to store the intermediate results. The value dp[i][j] represents the number of ways to make a sum of j using the first i coins.
+
+The initialization loop sets dp[i][0] to 1 for all i from 0 to N. This is because there is always one way to make a sum of 0, i.e., by not selecting any coin.
+
+The nested loops iterate over each coin and each possible sum. For each combination of coin and sum, the code checks whether the current coin can be used to contribute to the sum. If coins[i-1] (the denomination of the current coin) is less than or equal to j, it means the coin can be used. In this case, the number of ways to make the sum j using the current coin is added to the number of ways without using the current coin. This is represented by the recurrence relation: dp[i][j] = dp[i][j - coins[i-1]] + dp[i-1][j]. If the current coin cannot be used, the value is simply copied from the row above, representing the number of ways without using the current coin: dp[i][j] = dp[i-1][j].
