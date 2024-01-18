@@ -1,0 +1,18 @@
+Explanation : 
+
+Counting the elements:
+
+f is the count of elements in the array that are less than or equal to k.
+nf is the count of elements among the first f elements that are greater than k.
+
+Sliding Window Technique:
+
+The code uses a sliding window approach to find the minimum number of swaps.
+The window initially covers the first f elements.
+The loop iterates until the right pointer (r) reaches the end of the array.
+The result (res) is updated with the minimum of the current result and nf.
+The window moves one step to the right, and nf is updated based on the new elements included/excluded in the window.
+
+Result:
+
+The final result is the minimum number of swaps required to bring all elements less than or equal to k to the beginning of the array.
