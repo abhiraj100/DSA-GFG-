@@ -1,0 +1,20 @@
+Explanation : 
+
+nextPermutation method:
+
+Takes two parameters: N (the length of the array) and arr (an array of integers).
+Initializes ind to -1, which will later be used to identify the position to swap.
+Iterates through the array from right to left to find the first pair of adjacent elements where arr[i] < arr[i+1]. If found, it sets ind to i and breaks the loop.
+Checks if ind is still -1 after the loop. If so, it means the array is in descending order, and the entire array needs to be reversed to get the smallest permutation.
+If ind is not -1, it searches for the rightmost element greater than arr[ind] and swaps them. Then, it reverses the subarray from ind + 1 to the end.
+Converts the array to a List and returns it.
+
+reverseArray method:
+
+Takes an array arr and two indices start and end.
+Reverses the subarray from start to end using a two-pointer approach.
+
+swapElements method:
+
+Takes an array arr and two indices i and ind.
+Swaps the elements at positions i and ind in the array.
