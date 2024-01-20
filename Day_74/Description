@@ -1,0 +1,19 @@
+Explanation :
+
+Sorting the intervals:
+The code first sorts the Interval array based on the start times of the intervals (the first element in each subarray). This is done using the Arrays.sort method along with a custom comparator that compares the first element of each subarray.
+
+Iterating through intervals:
+The code initializes a list ans to store the merged intervals and then iterates through the sorted intervals using a for loop.
+
+Merging overlapping intervals:
+Inside the loop, the code initializes variables start and end to the start and end of the current interval. It then checks if the ans list is not empty and if the current interval (end) is less than or equal to the end of the last interval in the ans list. If true, it means the current interval is completely contained within the last merged interval, and the loop skips to the next iteration.
+
+Merging overlapping intervals (contd.):
+A nested loop is used to iterate through the remaining intervals starting from the next one (j=i+1). It checks if the start of the next interval (Interval[j][0]) is less than or equal to the current end. If true, it means there is an overlap, and the end is updated to be the maximum of the current end and the end of the overlapping interval (Interval[j][1]). If there is no overlap, the loop breaks.
+
+Adding merged intervals to the result:
+After merging all overlapping intervals, a new merged interval is added to the ans list.
+
+Returning the result:
+Finally, the merged intervals are converted back to a 2D array and returned.
