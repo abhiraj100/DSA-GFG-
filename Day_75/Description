@@ -1,0 +1,23 @@
+Explanation :
+
+The method takes three parameters:
+
+A: an array of long integers.
+N: the length of the array.
+K: an integer representing the size of the sliding window.
+
+Inside the method:
+
+An ArrayList<Long> named cur is used to store the first negative integer in each window.
+A Queue<Long> named q (implemented as a LinkedList) is used to maintain the negative integers within the sliding window.
+
+The code then iterates over the first 'K' elements of array 'A' and enqueues negative values into the queue 'q'.
+
+It uses a sliding window approach to process the remaining elements of the array.
+
+At each step, it checks whether the queue 'q' is empty or not. If not, it adds the front element of the queue to the 'cur' ArrayList.
+It then moves the sliding window by incrementing both the left (l) and right (r) pointers.
+If the element at the left pointer 'l' matches the front element of the queue, it is dequeued.
+If there are more elements in the array and the current element is negative, it is enqueued.
+
+Finally, the 'cur' ArrayList is converted to a long array 'res', which is then returned.
