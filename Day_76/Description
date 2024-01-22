@@ -1,0 +1,13 @@
+Explanation :
+
+The method initializes some variables, including the maximum product (max), the maximum negative element (max_negative), and counters for negative elements (count_neg) and zero elements (count_zero).
+
+It iterates over the array elements and updates the maximum product considering each element. It also keeps track of negative elements and the maximum negative element.
+
+There are special cases handled:
+
+If all elements are zeros, the maximum product is zero.
+If there is only one negative element and the rest are zeros, the maximum product is zero.
+If the count of negative elements is odd, it divides the maximum product by the maximum negative element.
+
+Finally, it returns the maximum product as an integer.
