@@ -1,0 +1,30 @@
+Explanation :
+
+find method:
+
+This method takes three parameters: an integer array arr, its size n, and the element to be searched x.
+It initializes an ArrayList<Integer> named li to store the results.
+Calls two binary search helper methods (binarysearchfirstoccr and binarysearchlastoccur) to find the first and last occurrences of the element x.
+Adds the results to the li ArrayList and returns it.
+
+binarysearchfirstoccr method:
+
+This is a binary search implementation to find the first occurrence of the element x in the array.
+It takes the array arr, the low and high indices, and the target element x as parameters.
+The variable result is initialized to -1.
+The method uses a while loop to perform binary search.
+If the middle element is equal to x, it updates result and continues the search in the left half by updating the high pointer.
+If the middle element is less than x, it searches in the right half by updating the low pointer.
+If the middle element is greater than x, it searches in the left half by updating the high pointer.
+The loop continues until the search space is exhausted, and the method returns the index of the first occurrence.
+
+binarysearchlastoccur method:
+
+Similar to binarysearchfirstoccr, this method finds the last occurrence of the element x in the array.
+It takes the array arr, the low and high indices, and the target element x as parameters.
+The variable result is initialized to -1.
+The method uses a while loop to perform binary search.
+If the middle element is equal to x, it updates result and continues the search in the right half by updating the low pointer.
+If the middle element is greater than x, it searches in the left half by updating the high pointer.
+If the middle element is less than x, it searches in the right half by updating the low pointer.
+The loop continues until the search space is exhausted, and the method returns the index of the last occurrence.
