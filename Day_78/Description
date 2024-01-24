@@ -1,0 +1,19 @@
+Explanation :
+
+Initialize three pointers i, j, and k to 0, representing the current index in arrays A, B, and C respectively.
+
+Create an ArrayList called result to store the common elements.
+
+Initialize a variable lastAdded as null. This variable will keep track of the last element added to the result list.
+
+Use a while loop to iterate through the arrays until one of them is exhausted.
+
+Inside the loop, compare the elements at the current indices (A[i], B[j], and C[k]).
+
+If all three elements are equal, it means we found a common element. Check if this element is the same as the lastAdded element. If not, add it to the result list and update lastAdded. Then, increment all three pointers (i, j, and k).
+If A[i] is less than B[j], increment i.
+If B[j] is less than C[k], increment j.
+If neither of the above conditions is true, increment k.
+Continue this process until one of the arrays is exhausted.
+
+Return the result ArrayList containing the common elements.
