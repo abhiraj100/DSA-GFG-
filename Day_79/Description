@@ -1,0 +1,16 @@
+Explanation :
+
+The function smallestSumSubarray takes two parameters: an array of integers (a[]) and the size of the array (size).
+
+It initializes two variables:
+
+min: Initialized to Integer.MAX_VALUE, which is the maximum possible integer value. This variable will be used to keep track of the smallest sum subarray.
+sum: Initialized to 0, which will be used to calculate the running sum of subarrays.
+The code then iterates through each element of the array using a for loop.
+
+Inside the loop:
+
+It adds the current element to the running sum (sum += a[i]).
+Checks if the current sum is greater than the current element. If true, it updates the sum to be the current element (sum = a[i]).
+Updates the min variable with the minimum value between the current sum and the existing min (min = Math.min(sum, min)).
+After the loop completes, the function returns the smallest sum found during the iteration, which is stored in the min variable.
