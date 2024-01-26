@@ -1,0 +1,11 @@
+Explanation :
+
+The method kthLargest takes three parameters: N (the size of the array), K (the position of the largest element to find), and Arr (the input array).
+
+A PriorityQueue named q is created with reverse order, so it behaves as a max heap, meaning the element with the highest value is at the top.
+
+The code then iterates through each element in the array (Arr). For each element, it calculates the cumulative sum starting from that element and adds the sums to the priority queue.
+
+After processing all possible subarrays, the code removes the first K-1 elements from the priority queue using poll(). This leaves the Kth largest element at the top of the priority queue.
+
+Finally, the method returns the Kth largest element by calling q.peek().
