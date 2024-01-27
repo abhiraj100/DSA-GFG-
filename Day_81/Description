@@ -1,0 +1,19 @@
+Explanation :
+
+Initialization:
+The code initializes a three-dimensional array dp with dimensions [n+1][2][3]. Here, n is the number of days or elements in the input array arr. The dimensions represent the following:
+
+n+1: Days or elements in the array, including an extra index n for base case handling.
+2: Represents two states: 0 for not holding a stock, 1 for holding a stock.
+3: Represents three transactions, as the problem allows at most two transactions.
+
+Base Cases:
+This loop initializes base cases. If there are no transactions (tran = 0), then the profit is always 0 for any day. Hence, dp[i][buy][0] is set to 0 for all i and buy.
+Similarly, for the last day (index n), the profit for any state is also 0 because there are no more days for transactions.
+
+Dynamic Programming Loop:
+This loop iterates through the array in reverse order. For each day (i), it considers both buying (buy = 1) and not buying (buy = 0) states, as well as the number of transactions (tran). It calculates the maximum profit for each state and updates the dp array accordingly.
+
+Result:
+The final result is the maximum profit on the first day (i=0), considering that we are not holding a stock (buy=1) and have completed two transactions (tran=2).
+
