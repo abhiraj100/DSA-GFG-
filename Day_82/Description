@@ -1,0 +1,28 @@
+Explanation : 
+
+Method Signature:
+This method takes three parameters:
+
+arr: an array of integers.
+n: the length of the array.
+k: a positive integer.
+It returns an integer, representing the minimum number of removals required to have a subarray in which the difference between the maximum and minimum elements is less than or equal to k.
+
+Initialization:
+If the length of the array n is 1, it means there is only one element in the array, and no removals are needed. The max variable is initialized to the minimum possible integer value.
+
+Sorting the Array:
+The array arr is sorted in ascending order.
+
+Sliding Window Approach:
+A Queue (q) is used to maintain a sliding window of elements. The window ensures that the difference between the maximum and minimum elements in the window is less than or equal to k.
+
+The first element of the sorted array (arr[0]) is added to the queue.
+
+The loop iterates over the sorted array from the second element (i = 1):
+
+It removes elements from the front of the queue (q.poll()) until the difference between the current element and the front element of the queue is less than or equal to k.
+The current element is then added to the queue.
+The maximum size of the queue (q.size()) is updated and stored in the max variable.
+Result:
+The method returns the result, which is the difference between the original length of the array (n) and the maximum size of the sliding window (max). This represents the minimum number of removals needed to satisfy the given condition.
