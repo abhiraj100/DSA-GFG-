@@ -1,0 +1,14 @@
+Explanation:
+
+The isStackPermutation method takes three parameters: n (length of arrays), ip (input array), and op (output array).
+
+It uses a Stack<Integer> called perm to simulate the stack.
+
+It initializes opidx to 0, which will be used to track the index of the element in the 'op' array that is currently being compared.
+
+The method iterates through each element of the 'op' array:
+
+Pushes the corresponding element from the 'ip' array onto the stack.
+Checks if the top of the stack is equal to the element in 'op' at the current 'opidx'. If true, pops the top element and increments 'opidx'. This is done in a while loop to handle consecutive matches.
+
+After the loop, it checks if 'opidx' has reached the end of the 'op' array and if the stack is empty. If true, it returns 1, indicating that the permutation is valid. Otherwise, it returns 0.
