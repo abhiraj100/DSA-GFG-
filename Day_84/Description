@@ -1,0 +1,26 @@
+Explanation :
+
+Data Structures:
+
+An ArrayList<Integer> list is created to store the results.
+A TreeSet<Integer> ts is used to maintain a sorted set of elements.
+Initialization:
+
+ts.add(arr[n-1]): The last element of the array is added to the TreeSet. This will be the starting point for finding the least greater elements.
+
+list.add(-1): The last element in the result list is initialized with -1 because there is no element to the right of the last element.
+
+Iteration from Right to Left:
+
+A loop runs from n-2 to 0 (right to left) to iterate through each element of the array except the last one.
+
+ts.higher(arr[i]): The higher method of TreeSet is used to find the least greater element than the current element arr[i]. If such an element exists, it is added to the result list; otherwise, -1 is added.
+
+ts.add(arr[i]): The current element arr[i] is added to the TreeSet to update the set of elements for the next iteration.
+
+Reverse the Result List:
+
+Collections.reverse(list): The result list is reversed to provide the final order of least greater elements to the right of each element in the input array.
+Return Result:
+
+The ArrayList<Integer> list containing the least greater elements is returned.
