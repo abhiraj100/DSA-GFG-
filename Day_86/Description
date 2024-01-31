@@ -1,0 +1,10 @@
+Explanation :
+
+The wineSelling method processes an array of values (Arr) representing wine bottles, where positive values represent buying wine, and negative values represent selling wine.
+The method uses two ArrayDeque instances (pos and neg) to maintain separate queues for positive and negative values.
+The algorithm iterates through the array, and for each value, it performs the following steps:
+If the value is positive, it adds a new pair to the positive queue (pos).
+If the positive queue is not empty, it processes pairs of positive and negative values, updating the total work done and adjusting the queues accordingly.
+If the value is negative, it adds a new pair to the negative queue (neg).
+If the negative queue is not empty, it processes pairs of positive and negative values, updating the total work done and adjusting the queues accordingly.
+The method returns the total work done.
