@@ -1,0 +1,17 @@
+Explanation :
+
+left and right are initialized to the start and end indices of the array, respectively.
+
+The while loop continues until left is greater than right, ensuring the search space is valid.
+
+mid is calculated as the middle index using bitwise right shift. It's an optimization for mid = (left + right) / 2.
+
+next and prev are calculated to represent the indices of the next and previous elements in a circular manner, accounting for array rotation.
+
+The if condition checks if the current element is less than or equal to both its neighbors. If true, it means the current element is the minimum in the rotated array.
+
+If the middle element is smaller than the rightmost element (arr[mid] < arr[right]), then the minimum element must be in the left half. So, we update right to mid - 1.
+
+If the middle element is greater than the rightmost element, the minimum element must be in the right half. So, we update left to mid + 1.
+
+If the loop exits without returning, it means the array is not rotated. In this case, the minimum element is the first element (arr[0]).
