@@ -1,0 +1,17 @@
+Explanation :
+
+numberOfStudent Function:
+
+Calculates the number of students required to distribute the pages with a given capacity.
+It iterates through the pages, keeping track of the current capacity assigned to a student.
+If the current capacity exceeds the given capacity, it increments the student count and resets the current capacity.
+
+findPages Function:
+
+Initializes the start and end values for binary search.
+If the number of students is more than the number of pages, it returns -1 as it's not possible to distribute the pages.
+If the number of students needed for the maximum pages is less than or equal to the available students, it returns the maximum pages.
+Uses binary search to find the minimum number of pages required to distribute among students.
+The binary search is conducted within the range of the maximum and total sum of pages.
+It checks the number of students needed for the current mid value and adjusts the search space accordingly.
+The function returns the minimum number of pages required for distribution.
