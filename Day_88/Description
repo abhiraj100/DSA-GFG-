@@ -1,0 +1,23 @@
+Explanation :
+
+Method Signature:
+
+public static int matSearch(int mat[][], int N, int M, int X): This method takes a 2D matrix (mat), the number of rows (N), the number of columns (M), and the integer to be searched (X) as parameters. It returns an integer indicating whether the element is found (1) or not found (0).
+
+Initialization:
+
+int ans = 0;: Initializes a variable ans to 0. This variable will be used to store the final result.
+
+Iterating through Rows:
+
+for (int i = 0; i < N; i++): Iterates through each row of the matrix.
+Inside this loop, there is a conditional check to skip the current row if X is outside the range of the current row.
+
+Iterating through Columns:
+
+for (int j = 0; j < M; j++): Iterates through each element of the current row.
+If the current element (mat[i][j]) is equal to X, set ans to 1.
+
+Return the Result:
+
+The method returns the final value of ans, indicating whether the element X is found (1) or not found (0) in the matrix
