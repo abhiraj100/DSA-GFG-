@@ -1,0 +1,24 @@
+Explanation :
+
+Method Signature:
+
+The method search takes four parameters:
+A[]: An array of integers (presumably a rotated sorted array).
+l: The starting index of the search range.
+h: The ending index of the search range.
+key: The element to be searched in the array.
+
+While Loop:
+
+The function uses a while loop to iterate through the array within the specified range (l to h inclusive).
+The condition l <= h ensures that the loop continues until the search range is valid.
+
+Comparison and Movement:
+
+Inside the loop, it checks if the element at index l is not equal to the key.
+If key is not found at index l, it increments l to move to the next element in the array.
+If key is found at index l, it immediately returns the index.
+
+Return -1 if Not Found:
+
+If the loop completes without finding the key in the specified range, it returns -1, indicating that the key is not present in the array within the given range.
