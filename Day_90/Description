@@ -1,0 +1,17 @@
+Explanation :
+
+int maxOnes = -1;: Initializes a variable maxOnes to -1. This variable will be used to keep track of the maximum number of 1s found in any row.
+
+int idx = -1;: Initializes a variable idx to -1. This variable will store the index (row number) of the row with the maximum number of 1s.
+
+The code uses a nested loop to iterate through each row (i) and each column (j) of the 2D array.
+
+int cnt = 0;: Initializes a counter variable cnt to 0. This variable will be used to count the number of 1s in the current row.
+
+The inner loop (for(int j = 0; j < m; j++)) iterates through each column of the current row.
+
+if(arr[i][j] == 1) cnt++;: Checks if the current element in the array is equal to 1. If true, increments the cnt variable, counting the number of 1s in the current row.
+
+After counting the number of 1s in the current row, the code checks if cnt is greater than maxOnes and if cnt is not equal to 0. If true, it means the current row has more 1s than the previous maximum, and it updates the maxOnes and idx accordingly.
+
+Finally, the method returns the index (idx) of the row with the maximum number of 1s. If no row contains 1s, it returns -1.
