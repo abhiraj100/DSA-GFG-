@@ -1,0 +1,19 @@
+Explanation :
+
+public long findMinDiff (ArrayList<Integer> a, int n, int m): This method takes three parameters:
+
+a: an ArrayList of Integers, presumably representing a list of numbers.
+n: an integer representing the size of the ArrayList a.
+m: an integer representing the number of elements to be selected for comparison.
+Collections.sort(a);: This line sorts the ArrayList a in ascending order. Sorting is essential for finding the minimum difference efficiently.
+
+int min = a.get(n-1);: Here, min is initialized with the maximum possible difference, which is the difference between the largest and smallest elements in the sorted array. Since the array is sorted in ascending order, the largest element will be at index n-1.
+
+The for loop iterates over the sorted array a from index 0 to n - m (inclusive).
+
+int i = 0; i < n - m + 1; i++: The loop starts from 0 and ends at n - m. It ensures that there are at least m elements remaining after the current position for the comparison.
+
+Inside the loop:
+int v = a.get(i + m - 1) - a.get(i);: This line calculates the difference between the m-th element from the current position (i) and the current element (i). It computes the difference between the largest and smallest elements within the current window of size m.
+min = Math.min(min, v);: This updates the min variable with the minimum of its current value and the calculated difference v. This ensures that min holds the smallest difference found so far.
+Finally, the method returns the minimum difference (min) found during the iterations.
