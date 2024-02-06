@@ -1,0 +1,11 @@
+Explanation :
+
+The for loop iterates from i = 0 to i < 100,000 (1e5 is a shorthand notation for 100,000).
+
+Inside the loop, the variable x is calculated based on the value of i. It calculates the sum of integer divisions of i by powers of 5: i/5 + i/25 + i/125 + i/625 + i/3125 + i/15625.
+
+If the calculated value of x is greater than or equal to the input n, the loop terminates, and the current value of i is returned.
+
+If the loop completes without finding a suitable i such that x >= n, then the method returns 0.
+
+To explain further, the expression i/5 + i/25 + i/125 + i/625 + i/3125 + i/15625 calculates the number of times i can be divided by powers of 5 without remainder. For example, i/5 counts how many times i can be divided by 5, i/25 counts how many times i can be divided by 25, and so on. These values are accumulated in x.
