@@ -1,0 +1,12 @@
+Explanation :
+
+merge(int arr[], int l, int m, int r): 
+This method merges two sorted subarrays (arr[l...m] and arr[m+1...r]) into a single sorted array. 
+It first creates a temporary ArrayList temp to store the merged elements. Then, it initializes pointers left and right for the two subarrays. 
+It compares elements at arr[left] and arr[right], adds the smaller one to temp, and increments the corresponding pointer. 
+Once one of the subarrays is exhausted, it adds the remaining elements of the other subarray to temp. Finally, it copies the sorted elements from temp back to the original array arr.
+
+mergeSort(int arr[], int l, int r): 
+This method implements the merge sort algorithm recursively. 
+It first checks if the base case is reached (i.e., if l >= r, indicating a single element or an empty array). 
+If not, it calculates the midpoint mid of the array and recursively calls mergeSort on the left and right halves. After sorting both halves, it merges them using the merge method.
