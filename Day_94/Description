@@ -1,0 +1,26 @@
+Explanation :
+
+The function kthSmallestNum takes several parameters:
+
+n: The number of ranges.
+range: An array of arrays where each sub-array represents a range with two integers [start, end].
+q: The number of queries.
+queries: An array of integers representing the queries.
+The code first sorts the given ranges based on the start values using Arrays.sort() and a custom comparator. This is done to merge overlapping or adjacent ranges later.
+
+Next, it initializes an ArrayList list to store merged ranges.
+
+It iterates through the sorted ranges, merging overlapping or adjacent ranges into a single range and storing them in the list.
+
+After merging all the ranges, the code iterates through the queries array.
+
+For each query k, it iterates through the list of merged ranges to find the corresponding range containing the kth smallest number.
+
+It calculates the current range size curr and checks if it's greater than or equal to k.
+
+If curr >= k, it calculates the kth smallest number within that range and adds it to the result list res.
+It updates k by subtracting the current range size.
+Breaks out of the inner loop since the kth smallest number within the range has been found.
+If after iterating through all the ranges, there are still remaining kth smallest numbers to find (k > 0), it means the kth smallest number falls outside the given ranges. In this case, it adds -1 to the result list res.
+
+Finally, it returns the result list res containing the kth smallest numbers corresponding to each query.
