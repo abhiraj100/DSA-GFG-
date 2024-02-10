@@ -1,0 +1,25 @@
+Explanation :
+
+buildHeap(int arr[], int n):
+
+This function is used to build a heap from an array.
+It takes an integer array arr[] and its size n as input.
+However, the function body is empty in the provided code, so it doesn't contain any implementation. Normally, building a heap involves starting from the last non-leaf node and performing heapify operations on each node until the root is reached.
+
+
+heapify(int arr[], int n, int i):
+
+This function is used to maintain the heap property.
+It takes an integer array arr[], its size n, and an index i as input.
+It compares the node at index i with its left and right children, if they exist, and finds the largest among the three.
+If the largest element is not the current node (i), it swaps the current node with the largest child and recursively calls heapify on the affected child to ensure the heap property is maintained.
+This function ensures that the subtree rooted at index i satisfies the heap property.
+
+
+heapSort(int arr[], int n):
+
+This function sorts an array using heap sort.
+It first builds a max heap from the input array.
+Then, it repeatedly extracts the maximum element from the heap (which is always at the root) and places it at the end of the array, reducing the size of the heap by 1 each time.
+After each extraction, it ensures that the remaining elements form a valid heap by calling heapify on the reduced heap.
+This process continues until the entire array is sorted in ascending order.
