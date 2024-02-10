@@ -1,0 +1,34 @@
+Explanation :
+
+Info class:
+
+This class is a static nested class within the Solution class.
+It holds information about a subtree of the binary tree, including:
+maxi: the maximum value in the subtree.
+mini: the minimum value in the subtree.
+isBST: whether the subtree is a BST.
+size: the size of the subtree.
+It has two constructors:
+One that initializes the fields with default values (minimum and maximum integers, isBST as true, and size as 0).
+Another constructor that initializes the fields with provided values.
+
+solve method:
+
+This is a private static method responsible for solving the problem recursively.
+It takes a Node object (representing the root of a subtree) and an array ans to store the result.
+It recursively traverses the tree and calculates the size of the largest BST rooted at the current node.
+It returns an Info object containing information about the subtree rooted at the current node.
+Within each recursive call:
+It checks if the current node is null, in which case it returns an Info object with default values.
+It recursively calls solve for the left and right subtrees.
+It calculates the minimum and maximum values in the subtree, and whether the subtree rooted at the current node is a BST.
+It calculates the size of the subtree if it is a BST and updates the maximum size found so far (ans[0]).
+It returns an Info object with the updated information about the current subtree.
+
+largestBst method:
+
+This is a static method that serves as an entry point for finding the size of the largest BST.
+It takes a Node object (representing the root of the binary tree) as input.
+It initializes an array maxSize to store the result.
+It calls the solve method passing the root node and the maxSize array.
+Finally, it returns the size of the largest BST found, which is stored at maxSize[0].
