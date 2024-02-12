@@ -1,0 +1,10 @@
+Explanation :
+
+The candyStore method takes three parameters: an array of integers candies[], the length of the array N, and an integer k.
+It initializes an ArrayList called ans to store the minimum and maximum costs.
+The candies array is sorted in ascending order using Arrays.sort(candies). This ensures that candies are arranged from least to greatest.
+Two variables min and max are initialized to keep track of the minimum and maximum costs respectively.
+A variable free is initialized to 0. This variable simulates the number of candies purchased for free after purchasing every kth candy.
+The first loop calculates the minimum cost. It iterates over the sorted candies array from the beginning, adding each candy's cost to min until N - free candies are considered. The variable free keeps track of the number of free candies obtained after every k candies are purchased.
+The second loop calculates the maximum cost. It iterates over the sorted candies array from the end, adding each candy's cost to max until free candies are considered. Similar to the first loop, free keeps track of the number of free candies obtained after every k candies are purchased.
+Finally, the minimum and maximum costs are added to the ans list, and this list is returned.
