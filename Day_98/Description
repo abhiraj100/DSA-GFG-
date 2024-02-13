@@ -1,0 +1,17 @@
+Explanation :
+
+It takes four parameters:
+
+n: an integer representing the number of rows.
+m: an integer representing the number of columns.
+k: an integer representing the number of enemies.
+enemy: a 2D integer array representing the positions of enemies. Each element of the enemy array is itself an array of size 2, where the first element represents the row index and the second element represents the column index of an enemy.
+It initializes two arrays, rows and cols, each with a size one greater than the maximum number of rows or columns, respectively. These arrays are used to keep track of whether a row or column contains an enemy.
+
+It iterates over the enemy array and marks rows and columns containing enemies by setting the corresponding index in the rows or cols array to 1.
+
+It calculates the maximum gap between consecutive rows and columns that contain enemies. It does this by iterating over the rows and cols arrays, finding consecutive indices with enemies, and calculating the maximum gap between them.
+
+It calculates the maximum gap for the last row and column as the distance from the last enemy to the end of the grid.
+
+It returns the product of the maximum row gap and the maximum column gap, which represents the largest rectangular area containing no enemies.
