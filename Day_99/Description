@@ -1,0 +1,23 @@
+Explanation :
+
+The fourSum method takes two parameters: an integer array arr and an integer target, and returns a list of lists (ArrayList<ArrayList<Integer>>) containing the quadruplets.
+
+Inside the method, it first determines the length of the input array arr and initializes an empty ArrayList named ans to store the result.
+
+The array arr is sorted in non-decreasing order using Arrays.sort(arr). Sorting the array allows for easier identification of duplicate elements and helps in optimizing the solution.
+
+The code then iterates through the array using two nested loops (i and j) to select two elements at a time. These elements will be part of the quadruplet.
+
+Within the nested loops, there is a condition to skip duplicate elements. If the current element (arr[i] or arr[j]) is the same as the previous one, and it's not the first occurrence (i.e., i > 0 or j > i + 1), then the loop continues to the next iteration without processing the current element. This step ensures that only unique combinations of elements are considered.
+
+Inside the nested loops, two pointers k and l are initialized. Pointer k starts from j + 1, and pointer l starts from the end of the array (n - 1).
+
+The code enters a while loop where it compares the sum of the elements at indices i, j, k, and l with the target value. Depending on the sum, the pointers k and l are adjusted accordingly to find all possible combinations.
+
+If the sum equals the target, a quadruplet is found. The elements at indices i, j, k, and l are added to a temporary list (temp), which is then added to the result list ans. Pointer k is incremented, and pointer l is decremented to find other combinations. Additionally, inner while loops are used to skip duplicate elements for k and l.
+
+If the sum is less than the target, pointer k is incremented to increase the sum.
+
+If the sum is greater than the target, pointer l is decremented to decrease the sum.
+
+Once all combinations have been explored, the method returns the list of quadruplets ans.
