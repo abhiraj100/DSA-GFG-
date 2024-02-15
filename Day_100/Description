@@ -1,0 +1,17 @@
+Explanation :
+
+Class Definition: The code defines a class named Solution.
+
+Static Method mergeSort: The mergeSort method is defined as static, which means it can be invoked without needing to create an instance of the Solution class. It takes a single argument head, which is the head node of the linked list to be sorted.
+
+Length Calculation: The code calculates the length of the linked list by traversing it once. It initializes a variable length to 0 and then iterates through the linked list, incrementing length for each node encountered.
+
+Bubble Sort Implementation: Instead of implementing merge sort, the code proceeds to perform a bubble sort on the linked list. Bubble sort is not efficient for large lists but is easy to implement. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
+The outer loop runs len times, where len is the length of the linked list.
+The inner loop iterates over the list and compares adjacent nodes. If the current node's data is greater than the next node's data, it swaps their data values.
+After each iteration of the inner loop, the largest element gets placed at the end of the list.
+The process continues until the list is sorted.
+Return: The method returns the head of the sorted linked list.
+
+Node Class: The code assumes the existence of a Node class representing a node in the linked list. However, the implementation of the Node class is not provided here.
