@@ -1,0 +1,19 @@
+Explanation :
+
+The findLongestConseqSubseq method takes an array arr[] and its size N as input and returns the length of the longest subsequence of consecutive integers within the array.
+
+It initializes fini to 1, assuming that the minimum length of a subsequence is 1.
+
+It initializes count to 1, which represents the length of the current consecutive sequence.
+
+It sorts the input array arr[] in non-decreasing order using Arrays.sort(arr).
+
+It then iterates through the sorted array starting from the second element.
+
+Inside the loop:
+
+If the current element is equal to the previous element, it means there are duplicates, so it skips to the next iteration.
+If the current element is consecutive to the previous element, it increments the count.
+If the current element is not consecutive to the previous element, it resets the count to 1.
+It updates the fini with the maximum value of fini and count.
+Finally, it returns the fini, which represents the length of the longest subsequence of consecutive integers in the array.
