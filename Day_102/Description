@@ -1,0 +1,50 @@
+Explanation :
+
+Class Definition:
+
+This code defines a class named Solution.
+
+Method Declaration:
+
+This code defines a public static method named kthSmallest, which takes three parameters:
+
+mat: a 2D array representing the matrix.
+n: an integer representing the size of the matrix (since it's a square matrix, the size is given just once).
+k: an integer representing the kth smallest element to be found in the matrix.
+
+Initializing Variables:
+
+ans: Initialized to -1, which will store the kth smallest element.
+mh: A PriorityQueue (min-heap) to store elements of the matrix.
+
+Adding Elements to the PriorityQueue:
+
+This nested loop iterates over each element in the matrix mat, adding each element to the PriorityQueue mh.
+
+Finding the kth Smallest Element:
+
+This loop pops elements from the PriorityQueue mh k times. After this loop, ans will store the kth smallest element in the matrix.
+
+Returning the Result:
+
+Finally, the method returns the kth smallest element.
+
+/*
+class Solution
+{
+    public static int kthSmallest(int[][]mat,int n,int k)
+    {
+        int ans=-1;
+        PriorityQueue<Integer> mh=new PriorityQueue<>();
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                mh.add(mat[i][j]);
+            }
+        }
+        for(int i=0; i<k; i++){
+            ans=mh.poll();
+        }
+        return ans;
+    }
+}
+*/
