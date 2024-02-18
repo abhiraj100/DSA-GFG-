@@ -1,0 +1,13 @@
+Explanation :
+
+The code defines a class named Solution which contains a method findPair that takes three parameters: an integer array arr, an integer size (which seems unused), and an integer n.
+
+Inside the findPair method, a HashMap<Integer,Integer> named hm is created to store the elements of the array along with their frequencies.
+
+The for loop iterates through the array arr and populates the HashMap hm with the elements of the array and their frequencies using the put method. If an element already exists in the HashMap, its frequency is incremented; otherwise, it is added with a frequency of 1 using getOrDefault.
+
+If the target difference n is equal to 0, the code checks if there are any duplicate elements in the array. It iterates through the array and checks if the frequency of any element is greater than or equal to 2. If so, it returns true.
+
+If the target difference n is not equal to 0, the code iterates through the array and calculates the complement com of each element with n. It then checks if the complement exists in the HashMap. If so, it returns true.
+
+If no pair is found satisfying the condition, the method returns false.
