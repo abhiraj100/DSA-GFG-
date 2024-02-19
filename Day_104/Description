@@ -1,0 +1,19 @@
+Explanation :
+
+The method Anagrams initializes an empty list of lists ans to store the groups of anagrams.
+
+It iterates through each string s in the input string_list.
+
+For each string s, it checks if the list of anagram groups ans is empty. If it is, it creates a new list containing s as its only element and adds it to ans.
+
+If ans is not empty, it iterates through each group of strings in ans to find if there's any group where s is an anagram of any string in that group.
+
+For each group in ans, it sorts the characters of the first string in that group (ans.get(i).get(0)) and the current string s alphabetically.
+
+It converts the sorted character arrays back to strings (a and b).
+
+If a is equal to b, it means s is an anagram of the strings in the current group. It adds s to that group (ans.get(i).add(s)) and sets k to 1 to indicate that s has been added to a group.
+
+If after iterating through all groups, k is still 0, it means s is not an anagram of any string in ans. In this case, it creates a new group containing only s and adds it to ans.
+
+Finally, it returns the list ans containing groups of anagrams.
