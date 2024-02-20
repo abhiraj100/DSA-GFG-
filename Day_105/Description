@@ -1,0 +1,14 @@
+Explanation :
+
+The code defines a class named Solution.
+Inside the class, there's a method named transfigure which takes two strings A and B as input and returns an integer.
+The method converts the input strings A and B into character arrays a and b respectively using the toCharArray() method.
+It initializes two integers i and j to the lengths of arrays a and b minus one respectively. These variables i and j will be used as pointers to traverse arrays a and b.
+It checks if the lengths of both arrays a and b are equal. If they are not, it returns -1, indicating that it's not possible to transfigure A into B.
+It initializes an integer variable sum to zero. This variable will be used to keep track of the difference between the ASCII values of characters in arrays a and b.
+It iterates through the arrays a and b simultaneously, calculating the difference in ASCII values of corresponding characters and updating the sum variable accordingly.
+After the loop, it checks if the sum is zero. If it's not zero, it means that the total ASCII values of characters in A are not equal to the total ASCII values of characters in B, indicating that it's not possible to transfigure A into B. In this case, it returns -1.
+It initializes an integer variable Result to zero. This variable will be used to count the number of characters that need to be transfigured.
+It enters a while loop where it compares characters from the end of arrays a and b. If the characters are equal, it decrements both i and j pointers. If they are not equal, it decrements only the i pointer and increments the Result variable.
+After the loop, it checks if the value of Result is equal to the length of array a. If it's equal, it means that all characters in A need to be transfigured to match B, indicating that it's not possible to transfigure A into B. In this case, it returns -1.
+Finally, it returns the value of the Result variable, which represents the minimum number of characters that need to be transfigured to convert A into B.
