@@ -1,0 +1,28 @@
+Explanation :
+
+Class Declaration:
+This line declares a class named Solution.
+
+Method Declaration:
+This declares a method named FirstNonRepeating that takes a string A as input and returns a string.
+
+StringBuilder Initialization:
+This initializes a StringBuilder named result which will be used to build the resulting string.
+
+LinkedHashMap Initialization:
+This initializes a LinkedHashMap named map to keep track of characters and their counts. LinkedHashMap maintains the order of insertion.
+
+Iterating through the Input String:
+This loop iterates through each character of the input string A one by one.
+
+Updating Character Counts:
+This line updates the count of the current character in the map. If the character is not present in the map, it initializes the count to 1; otherwise, it increments the existing count by 1.
+
+Appending the First Non-Repeating Character to Result:
+This line appends the first non-repeating character found so far to the result string by calling the getFirstNonRepeating method.
+
+Returning the Resulting String:
+This returns the final result as a string.
+
+getFirstNonRepeating Method:
+This method iterates through the map and returns the first character with a count of 1 (indicating it's non-repeating). If no such character is found, it returns '#'. This method helps in finding the first non-repeating character encountered during the iteration through the input string.
