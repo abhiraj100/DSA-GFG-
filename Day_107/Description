@@ -1,0 +1,29 @@
+Explanation :
+
+Method Signature:
+
+The public static int orangesRotting(int[][] grid) method is defined to take a 2D array grid representing the box of oranges and returns the minimum number of minutes required to rot all oranges or -1 if it's not possible.
+Initialization:
+
+A Queue<int[]> q is initialized using the LinkedList class to store coordinates of rotten oranges. This queue will be used for performing breadth-first search (BFS).
+freshOranges is initialized to count the number of fresh oranges initially present in the grid.
+Enqueue Rotten Oranges and Count Fresh Oranges:
+
+The nested loops iterate over all cells of the grid.
+If a cell contains a rotten orange (grid[i][j] == 2), its coordinates are added to the queue q.
+If a cell contains a fresh orange (grid[i][j] == 1), freshOranges counter is incremented.
+Check for Edge Case:
+
+If there are no fresh oranges (freshOranges == 0), it means all oranges are already rotten, so return 0.
+Initialize BFS:
+
+Add a sentinel value {-1, -1} to the queue q to indicate the end of a level.
+BFS:
+
+Perform BFS until the queue is empty.
+For each cell popped from the queue, check its adjacent cells.
+If an adjacent cell contains a fresh orange, rot it by changing its value to 2, reduce freshOranges counter, and add its coordinates to the queue.
+If there are no fresh oranges left (freshOranges == 0), return the current count of minutes plus one because we've finished rotting all oranges.
+Return -1 if Not Possible:
+
+If we've traversed the entire grid and there are still fresh oranges left (freshOranges > 0), it means it's not possible to rot all oranges, so return -1.
