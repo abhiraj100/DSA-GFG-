@@ -1,0 +1,23 @@
+Explanation :
+
+The class Solution contains two methods: maxSum and maximumPath.
+
+maxSum is a recursive function that calculates the maximum sum possible starting from a specific position (row, col) in the matrix. It takes the following parameters:
+
+row: The current row index.
+col: The current column index.
+Matrix: The matrix containing the values.
+dp: A 2D array used for memoization to store the maximum sum calculated so far for each position.
+
+Within maxSum:
+
+It first checks if the column index is out of bounds. If so, it returns a very small value, indicating that this path is not valid.
+If it's at the top row (row == 0), it returns the value of the element at that position.
+It checks if the maximum sum for the current position (row, col) has been already computed and stored in the dp array. If so, it returns that value.
+Otherwise, it calculates the maximum sum by considering three possible moves: going up, going up and to the left, or going up and to the right. It recursively calls maxSum for these positions and calculates the maximum of these three values.
+
+maximumPath function:
+
+It initializes a 2D array dp for memoization, filled with -1 initially.
+It iterates through each column in the first row and calculates the maximum sum path starting from each position in the first row by calling maxSum for each column.
+It keeps track of the maximum sum found among all these starting positions and returns it.
