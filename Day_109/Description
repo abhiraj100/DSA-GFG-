@@ -1,0 +1,20 @@
+Explanation :
+
+rotateby90() Method: This method is designed to rotate a square matrix of size n x n by 90 degrees anticlockwise.
+
+Reversing Rows:
+
+The first part of the method reverses each row of the matrix. It does so by iterating over each row (i) and within each row, it iterates up to the middle of the row (j < n/2).
+During each iteration, it swaps the elements symmetrically across the middle of the row. This effectively reverses the order of elements in each row.
+
+Transposing the Matrix:
+
+The second part of the method transposes the matrix. Transposing means converting rows into columns and vice versa.
+It iterates through the upper triangle of the matrix (excluding the diagonal) starting from the top-left corner (i = 0) and moving diagonally down to the right (j = i + 1).
+During each iteration, it swaps the elements at position (i, j) with (j, i). This effectively transposes the matrix.
+
+Explanation:
+
+Reversing the rows is done to ensure that after transposing, the final matrix rotates anticlockwise by 90 degrees.
+By first reversing the rows, we ensure that the elements in each row will end up in the correct column after transposing.
+Then, by transposing the matrix, we effectively rotate it by 90 degrees anticlockwise.
