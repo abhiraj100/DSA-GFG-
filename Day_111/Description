@@ -1,0 +1,24 @@
+Explanation :
+
+The Solution class contains a method named floodFill, which takes four parameters:
+
+img: a 2D array representing the image or grid to be filled.
+sr: the starting row index.
+sc: the starting column index.
+nc: the new color to be filled.
+
+Inside the floodFill method:
+
+It first initializes some variables:
+n and m represent the number of rows and columns in the img array respectively.
+ic represents the color of the starting pixel (sr, sc).
+vis is a boolean 2D array used to keep track of visited pixels.
+Then, it calls the solve method passing the starting row sr, starting column sc, dimensions of the image n and m, initial color ic, new color nc, the image array img, and the visited array vis.
+
+The solve method is a recursive function responsible for performing the flood fill operation:
+
+It first checks if the current position (r, c) is out of bounds or if it has already been visited. If so, it returns.
+It then checks if the color of the current pixel is equal to the initial color ic. If not, it returns.
+If the current pixel is eligible for filling, it marks it as visited, changes its color to the new color nc, and recursively calls itself for its neighboring pixels in up, down, right, and left directions.
+This recursive process continues until all connected pixels of the initial color are filled with the new color.
+Once the flood fill operation is completed, the modified image array img is returned.
