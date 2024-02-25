@@ -1,0 +1,19 @@
+Explanation :
+
+public static ArrayList<ArrayList<Integer>> uniqueRow(int a[][], int r, int c): This line defines the method uniqueRow, which takes a 2D array a, representing the matrix, along with integers r and c, representing the number of rows and columns, respectively. The method returns an ArrayList containing ArrayLists of integers representing unique rows.
+
+ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();: This line initializes an empty ArrayList named res to store unique rows.
+
+for(int i=0;i<r;i++): This loop iterates over each row of the input matrix.
+
+ArrayList<Integer> lt = new ArrayList<>();: Inside the loop, a new ArrayList named lt is created to store the elements of the current row.
+
+for(int j=0;j<c;j++): This nested loop iterates over each element of the current row.
+
+lt.add(a[i][j]);: Within the nested loop, each element of the current row is added to the lt ArrayList.
+
+if(!res.contains(lt)): After adding all elements of the current row to lt, it checks if the res ArrayList already contains lt. If it does not contain lt, it implies that the current row is unique.
+
+res.add(new ArrayList<>(lt));: If the current row is unique, a new ArrayList containing the elements of lt is added to res. The new ArrayList<>(lt) ensures that a new copy of the ArrayList is added, preventing modification of the lt ArrayList.
+
+Finally, the method returns the res ArrayList containing unique rows.
