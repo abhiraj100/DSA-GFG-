@@ -1,0 +1,35 @@
+Explanation :
+
+longestPath() method:
+
+This is the entry point of the solution.
+It takes the following parameters:
+mat: The matrix representing the grid.
+n and m: The dimensions of the matrix.
+xs and ys: Coordinates of the source point.
+xd and yd: Coordinates of the destination point.
+It initializes an array ans to store the answer and a boolean matrix visited to keep track of visited cells.
+It calls the solve() method to find the longest path starting from the source (xs, ys).
+
+solve() method:
+
+This method is a recursive function that performs depth-first search (DFS) to explore possible paths from the source to the destination.
+It takes the following parameters:
+xs and ys: Current coordinates.
+n and m: Dimensions of the matrix.
+mat: The matrix representing the grid.
+xd and yd: Coordinates of the destination.
+visited: Boolean matrix to mark visited cells.
+count: Length of the current path.
+ans: Array to store the longest path found so far.
+
+Base case:
+If the current position (xs, ys) is the destination (xd, yd) and it's a safe cell to move to, update ans if the current path length is greater than the previous longest path.
+
+Recursive cases:
+Try moving down, left, right, and up from the current position if it's safe to move to that position.
+Mark the current cell as visited before moving to the next cell and backtrack once the recursive call returns.
+
+isSafe() method:
+
+This method checks if the given coordinates (x, y) are within the bounds of the matrix, represent an open path, and have not been visited before.
