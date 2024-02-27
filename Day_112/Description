@@ -1,0 +1,11 @@
+Explanation :
+
+The class Solution contains two methods: searchWord and search2D.
+searchWord takes a 2D character array grid and a String word as input and returns a 2D array of coordinates where the word is found in the grid.
+The method initializes an ArrayList res to store the coordinates of found words.
+It then iterates through each cell of the grid and checks if the cell contains the first character of the word. If it does, it calls the search2D method to check if the word is present starting from that cell in any direction.
+If the word is found, its coordinates are added to the res ArrayList.
+Finally, if any words are found, the coordinates are converted from ArrayList to a 2D array and returned; otherwise, an empty 2D array is returned.
+search2D method takes the grid, starting position (row, col), and the word to search as input.
+It searches for the word in all 8 directions from the starting position by incrementing row and column indices using predefined direction arrays x and y.
+If the word is found in any direction, it returns true; otherwise, it returns false.
