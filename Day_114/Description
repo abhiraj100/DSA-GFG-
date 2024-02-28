@@ -1,0 +1,15 @@
+Explanation :
+
+ArrayList<Integer> li = new ArrayList<>();: This line creates an ArrayList named li to store the elements of the matrix.
+
+The nested loop:
+This loop iterates through each element of the input matrix Mat and adds them to the ArrayList li.
+
+Collections.sort(li);: This line sorts the elements in the ArrayList li in ascending order.
+
+int[][] sortedMat = new int[N][N];: This line creates a new 2D array named sortedMat with the same dimensions as the input matrix to store the sorted elements.
+
+The nested loop:
+This loop iterates through each element of the sorted ArrayList li and assigns them to the corresponding position in the sortedMat array.
+
+Finally, the method returns the sorted matrix sortedMat.
