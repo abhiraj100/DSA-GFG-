@@ -1,0 +1,70 @@
+Explanation :
+
+Method Signature:
+
+findAllPossiblePaths: This method takes three parameters - n, m, and grid.
+n and m represent the dimensions of the grid (n rows and m columns).
+grid is a 2D array representing the grid where each cell contains an integer value.
+
+Method Description:
+
+The method aims to find all possible paths from the top-left corner of the grid to the bottom-right corner.
+It returns a list of lists (ArrayList<ArrayList<Integer>>) containing all these paths.
+
+Variables:
+
+res: An ArrayList to store all the found paths.
+temp: An ArrayList to temporarily store the elements of a single path during the recursion.
+
+Recursive Method:
+
+findPath: This method is a recursive function to explore all possible paths from a given cell (i, j) in the grid.
+
+Parameters:
+n and m: Dimensions of the grid.
+i and j: Current position in the grid.
+grid: The 2D array representing the grid.
+res: The list to store all found paths.
+temp: Temporary list to store elements of a single path.
+The method explores all possible movements - right (increment j) and down (increment i) - from the current cell (i, j).
+At each step, it adds the current cell's value to the temp list and proceeds to explore further.
+If the current cell is not at the last row (i+1<n) or last column (j+1<m), it recursively calls itself to explore further paths.
+When it reaches the bottom-right corner (i==n-1 && j==m-1), it adds the current cell's value to the temp list and adds the completed path (temp) to the result (res).
+Finally, it removes the last element from the temp list (backtracking) before returning.
+
+Return:
+
+The method returns the res list containing all the found paths.Method Signature:
+
+findAllPossiblePaths: This method takes three parameters - n, m, and grid.
+n and m represent the dimensions of the grid (n rows and m columns).
+grid is a 2D array representing the grid where each cell contains an integer value.
+
+Method Description:
+
+The method aims to find all possible paths from the top-left corner of the grid to the bottom-right corner.
+It returns a list of lists (ArrayList<ArrayList<Integer>>) containing all these paths.
+Variables:
+
+res: An ArrayList to store all the found paths.
+temp: An ArrayList to temporarily store the elements of a single path during the recursion.
+
+Recursive Method:
+
+findPath: This method is a recursive function to explore all possible paths from a given cell (i, j) in the grid.
+
+Parameters:
+n and m: Dimensions of the grid.
+i and j: Current position in the grid.
+grid: The 2D array representing the grid.
+res: The list to store all found paths.
+temp: Temporary list to store elements of a single path.
+The method explores all possible movements - right (increment j) and down (increment i) - from the current cell (i, j).
+At each step, it adds the current cell's value to the temp list and proceeds to explore further.
+If the current cell is not at the last row (i+1<n) or last column (j+1<m), it recursively calls itself to explore further paths.
+When it reaches the bottom-right corner (i==n-1 && j==m-1), it adds the current cell's value to the temp list and adds the completed path (temp) to the result (res).
+Finally, it removes the last element from the temp list (backtracking) before returning.
+
+Return:
+
+The method returns the res list containing all the found paths.
