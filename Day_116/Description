@@ -1,0 +1,34 @@
+Explanation :
+
+genIp(String s) method:
+
+This method takes a string s as input and returns an ArrayList<String> containing generated IP addresses.
+It checks if the length of the input string is greater than 12 characters. If so, it returns an empty ArrayList.
+Otherwise, it calls the helpgenIp method to generate IP addresses and returns the result.
+
+helpgenIp(int i, int count, String s) method:
+
+This method is a recursive helper function to generate IP addresses.
+It takes three parameters: i (index), count (segment count), and s (the input string).
+It checks if count (the number of segments) exceeds 2. If so, it checks if the string is a valid IP address using the isValid method.
+If the string is valid, it adds it to the list and returns. Otherwise, it returns an empty list.
+It then iterates through the string, splitting it into two parts (first and second) and adding a period between them to form a new string aux. It then recursively calls itself with the incremented index and segment count.
+Finally, it returns the accumulated list.
+
+isValid(String s) method:
+
+This method checks if a given string s represents a valid IP address.
+It first checks if the string ends with a period, which would be invalid. If so, it returns false.
+It then splits the string using the period as a delimiter and stores the segments in an array split.
+It checks if the number of segments is not equal to 4, which would make it invalid.
+It then iterates through each segment:
+It checks if the segment is empty, starts with '0' followed by digits, or contains only zeros. These conditions would make the segment invalid.
+It checks if each character in the segment is a digit between '0' and '9'.
+It converts the segment into an integer using the con method and checks if it lies between 0 and 255.
+If all conditions are met, it sets ans to true.
+Finally, it returns the value of ans, indicating whether the entire IP address is valid.
+
+con(String a) method:
+
+This method converts a string representing a number into an integer.
+It iterates through each character in the string, converting it to an integer and accumulating it to form the final result.
