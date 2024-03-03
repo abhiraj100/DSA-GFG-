@@ -1,0 +1,11 @@
+Explanation :
+
+HashMap<String,Integer> map = new HashMap<>();: This line initializes a HashMap named map. In this map, keys are strings (String) representing elements of the input array, and values are integers (Integer) representing the frequency of each string.
+
+for(String s : arr)map.put(s,map.getOrDefault(s,0)+1);: This for loop iterates through each string s in the input array arr. For each string, it checks if the string is already present in the map. If it's present, it increments its frequency by 1; otherwise, it initializes its frequency as 1.
+
+ArrayList<String> list = new ArrayList<>(map.keySet());: This line creates an ArrayList named list initialized with the set of keys (unique strings) present in the map. This step effectively extracts all unique strings from the input array.
+
+Collections.sort(list,(a,b)-> map.get(b)-map.get(a));: This line sorts the ArrayList list based on the frequencies of the strings in descending order. It uses a custom comparator (a,b)-> map.get(b)-map.get(a) which compares the frequencies of two strings a and b. This comparator ensures that strings are sorted based on their frequencies in descending order.
+
+return list.get(1);: Finally, the method returns the second element of the sorted ArrayList list, which corresponds to the second most frequent string in the input array.
