@@ -1,0 +1,24 @@
+Explanation :
+
+Method Signature: The code defines a class named Solution with a method named search that takes two String arguments txt and pat representing the text and the pattern to be searched, respectively. The method returns an integer indicating whether the pattern is found in the text.
+
+Variable Initialization:
+
+res is initialized to -1. This variable will store the index where the pattern is found in the text.
+n is assigned the length of the text string txt.
+m is assigned the length of the pattern string pat.
+
+Pattern Search Loop:
+
+The outer loop iterates over each character of the text from index 0 to n - m. This loop controls the starting position for checking the pattern in the text.
+Inside the outer loop, there is an inner loop that iterates over each character of the pattern.
+Within the inner loop, it checks if the characters of the text starting from the current index (i) and the pattern match character by character.
+If at any point a mismatch is found, the inner loop breaks, and the outer loop moves to the next character in the text.
+
+Checking for Pattern Found:
+
+After the inner loop completes, if j (the index of the pattern) reaches the length of the pattern (m), it means that the entire pattern has been matched in the text starting from index i. In this case, it sets res to i + 1 (to indicate the index where the pattern starts in the text) and breaks out of the outer loop.
+
+Return Statement:
+
+After the loops, it checks if res is still -1. If it's not, it returns 1, indicating that the pattern was found in the text. Otherwise, it returns 0, indicating that the pattern was not found.
