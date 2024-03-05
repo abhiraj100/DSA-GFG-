@@ -1,0 +1,5 @@
+Explanation :
+
+find method: This method takes a character array arr and two indices i and j as input. It reverses the portion of the array from index i to j. It does this by swapping elements using the XOR swap algorithm.
+
+reverseWord method: This method takes a string str as input and returns its reverse. It first converts the input string into a character array arr. Then it calls the find method to reverse the entire array. Finally, it converts the reversed character array back into a string and returns it.
