@@ -1,0 +1,19 @@
+Explanation :
+
+
+This Java code defines a class Solution containing two methods pushAtBottom and reverse, which operate on a Stack of integers.
+
+pushAtBottom(Stack<Integer> s, int x):
+
+This method is recursive and aims to push an element x to the bottom of the stack s.
+If the stack is empty, it simply pushes x onto the stack and returns.
+If the stack is not empty, it recursively pops elements from the stack until it reaches the bottom, and then pushes x onto the stack again.
+This function essentially reverses the order of elements in the stack, with x being pushed at the bottom.
+
+reverse(Stack<Integer> s):
+
+This method is responsible for reversing the entire stack.
+It first checks if the size of the stack is 1, in which case the stack is already reversed, and it returns.
+If the size of the stack is greater than 1, it pops the top element from the stack.
+Then, it recursively calls itself to reverse the remaining stack elements.
+After the recursion, it calls the pushAtBottom method to push the popped element back into the stack at the bottom, effectively reversing the order of elements in the stack.
