@@ -1,0 +1,22 @@
+Explanation :
+
+public static int countSetBits(int n): This method takes an integer n as input and returns the count of set bits in its binary representation.
+
+The base case: if (n <= 1) { return n; }
+
+If n is 0 or 1, there's only one set bit in its binary representation, so the method returns n.
+
+Calculating the highest power of 2 less than or equal to n:
+
+int x = (int)(Math.log(n) / Math.log(2));
+This line calculates the highest power of 2 less than or equal to n. It computes the logarithm base 2 of n using the formula log(n) / log(2), as there's no direct function available for log2(n) in Java. The result is cast to an integer to truncate any decimal places.
+
+Recursive calculation of set bits:
+
+The method recursively calculates the set bits by breaking down n into powers of 2 and adding up the set bits in each power.
+return (int)(Math.pow(2, x - 1) * x + n - Math.pow(2, x)) + 1 + countSetBits((int)(n - Math.pow(2, x)));
+Math.pow(2, x - 1) * x calculates the total number of set bits in all powers of 2 less than n.
+n - Math.pow(2, x) calculates the remainder after subtracting the highest power of 2 from n.
+1 is added to account for the set bit at the highest power of 2.
+countSetBits((int)(n - Math.pow(2, x))) recursively calculates the set bits in the remainder.
+All these values are added together to obtain the total count of set bits in n.
