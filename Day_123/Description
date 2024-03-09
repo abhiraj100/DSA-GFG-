@@ -1,0 +1,11 @@
+Explanation :
+
+Here, the doUnion method takes two arrays a and b, along with their respective sizes n and m. It aims to find the union of the elements present in both arrays.
+
+A HashMap named countMap is created to store the count of each unique element encountered in both arrays. The keys of this map will be the unique elements, and the values will be their counts.
+
+These loops iterate through each element of arrays a and b. For each element, it checks if it already exists in the countMap. If it does, it increments its count by one; otherwise, it adds the element to the map with a count of 1.
+
+Here, countMap.keySet() retrieves the set of unique elements (keys) from the countMap. Then, it converts this set to a stream, maps each element to its integer value using mapToInt(Integer::intValue), and finally converts it to an array using toArray(). This array contains all the unique elements present in both arrays a and b.
+
+The method returns the length of the uniqueNumbers array, which represents the count of unique elements in the union of arrays a and b.
