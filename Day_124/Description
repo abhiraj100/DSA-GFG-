@@ -1,0 +1,19 @@
+Explanation :
+
+Method Signature:
+This method takes a string S as input and returns a string after removing consecutive duplicate characters.
+
+StringBuffer Initialization:
+A StringBuffer named ans is initialized to store the resulting string without consecutive duplicates.
+The first character of the input string S is appended to ans. This ensures that at least one occurrence of each character will be included in the result.
+
+For Loop:
+The loop iterates over the characters of the input string S starting from the second character (index 1) because the first character has already been appended to ans.
+
+Character Comparison and Appending:
+Inside the loop, the current character S.charAt(i) is compared with the previous character S.charAt(i-1).
+If the current character is different from the previous character, it means it's not a consecutive duplicate, so it's appended to the ans string.
+This logic effectively removes consecutive duplicate characters from the string.
+
+Returning Result:
+Finally, the ans StringBuffer is converted to a string using the toString() method and returned as the result.
