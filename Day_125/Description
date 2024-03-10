@@ -1,0 +1,11 @@
+Explanation :
+
+It starts by initializing a stack to store characters.
+It iterates through the characters of the input string S.
+For each character ch in S:
+If the stack is empty, it pushes ch onto the stack.
+If the stack is not empty and the top of the stack (stack.peek()) is equal to ch, it means consecutive characters are the same. In this case:
+It checks if the character on top of the stack is '0'. If it is, it pushes '1' onto the stack and increments the min counter (which keeps track of the number of flips required).
+If the character on top of the stack is '1', it pushes '0' onto the stack and increments the min counter.
+If the character ch is different from the top of the stack, it pushes ch onto the stack.
+Finally, it returns the minimum of min (the number of flips required to make consecutive characters alternate) and S.length() - min (the number of flips required to make all characters in S the opposite of the current top of the stack). This is because if you flip all characters to match the top of the stack, you also need to count the flips required to make the characters different from the top of the stack.
