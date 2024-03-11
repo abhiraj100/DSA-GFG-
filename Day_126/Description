@@ -1,0 +1,13 @@
+Explanation :
+
+The find_permutation method takes a string S as input and returns a list of strings containing all permutations of S. It initializes a HashSet named temp to store unique permutations and an ArrayList named ans to store the final sorted list of permutations.
+
+It calls the permutation method to generate permutations recursively, passing an empty string "" as the current permutation p, the input string S, and the set temp.
+
+Inside the permutation method:
+
+If the input string up (unprocessed string) is empty, it means all characters from the original string have been used to form a permutation. In this case, the current permutation p is added to the set temp to ensure uniqueness, and the method returns.
+Otherwise, it iterates through each character of the unprocessed string.
+For each character c at index 0 of the unprocessed string, it recursively generates permutations by inserting c at different positions in the current permutation p.
+It does this by splitting the current permutation p into two substrings f and s at index i, then concatenating f, c, and s together to form a new permutation. This process is repeated for all possible positions of c within p.
+Finally, the find_permutation method adds all unique permutations from the set temp to the ans list, sorts the list lexicographically, and returns it.
