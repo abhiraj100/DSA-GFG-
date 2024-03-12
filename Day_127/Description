@@ -1,0 +1,22 @@
+Explanation :
+
+The longestCommonSubstr method takes four parameters:
+
+S1: The first input string.
+S2: The second input string.
+n: The length of the first string S1.
+m: The length of the second string S2.
+It initializes a 2D array dp of size (n+1) x (m+1) to store the lengths of the longest common substrings found so far.
+
+It also initializes a variable max to keep track of the maximum length of the common substring encountered.
+
+It iterates through each character of both strings using nested loops:
+
+The outer loop runs from index 1 to n (inclusive) for string S1.
+The inner loop runs from index 1 to m (inclusive) for string S2.
+For each pair of characters at indices i and j in S1 and S2 respectively:
+
+If the characters are equal (S1.charAt(i-1) == S2.charAt(j-1)), it means there is a match between the current characters.
+In this case, the length of the longest common substring ending at these characters is incremented by 1 (dp[i][j] = dp[i-1][j-1] + 1), and the max length is updated if necessary.
+If the characters are not equal, the length of the common substring is reset to 0 (dp[i][j] = 0).
+After iterating through all characters of both strings, the method returns the value stored in max, which represents the length of the longest common substring found.
