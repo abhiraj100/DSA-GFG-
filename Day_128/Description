@@ -1,0 +1,13 @@
+Explanation :
+
+public class Solution { ... }: This line declares a class named Solution. The class encapsulates the method reverse.
+
+public String reverse(String S) { ... }: This line defines a method named reverse, which takes a String parameter S and returns a String. The public keyword indicates that this method is accessible from other classes.
+
+String tempString = "";: This line declares a temporary string variable tempString and initializes it with an empty string. This variable will hold the reversed version of the input string.
+
+for(int i = S.length() - 1; i >= 0; i--) { ... }: This line starts a for loop that iterates over the characters of the input string S in reverse order. The loop starts from the last character of the string (S.length() - 1) and continues until the first character (0). The loop variable i is decremented in each iteration.
+
+tempString += S.charAt(i);: Inside the loop, each character of the input string S, starting from the last character and moving towards the first, is appended to the tempString. This effectively reverses the string because characters are being added from the end of the original string to the beginning of the tempString.
+
+return tempString;: Finally, after the loop completes, the method returns the reversed string stored in the tempString variable.
