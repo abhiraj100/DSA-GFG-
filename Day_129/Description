@@ -1,0 +1,23 @@
+Explanation :
+
+Class Definition:
+This line declares a class named Solution. Inside this class, there's a method named isPalindrome.
+
+Method Definition:
+This line defines the method isPalindrome, which takes a string S as input and returns an integer. The integer return type suggests that the method likely returns 1 if the string is a palindrome and 0 if it is not.
+
+Variable Initialization:
+str is a StringBuilder object used to store the reversed string.
+s1 is a Stack of characters used to iterate through the characters of the input string S.
+
+Character Pushing into Stack:
+This loop iterates through each character of the input string S and pushes them onto the stack s1. This effectively reverses the order of characters in the string.
+
+Reversing the String:
+This loop pops characters from the stack s1 and appends them to the StringBuilder object str, effectively reversing the string.
+
+Palindrome Check:
+After the reversal, the code checks if the reversed string (str) is equal to the original string (S). If they are equal, it returns 1, indicating that the string is a palindrome. Otherwise, it returns 0, indicating that the string is not a palindrome.
+
+Closing Braces:
+The method definition and class definition are closed with closing braces }.
