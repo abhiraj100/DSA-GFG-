@@ -1,0 +1,10 @@
+Explanation :
+
+push1(Stack<Integer> st, Stack<Integer> st1): This method takes two stack objects st and st1 as input. It's a recursive method to push all elements of stack st onto stack st1. It works as follows:
+
+If st is empty, it returns st1.
+Otherwise, it pops the top element (x) from stack st.
+Then it recursively calls itself with the updated stacks (st with the popped element and st1 with the same elements pushed so far).
+After the recursion, it pushes the popped element x onto stack st1.
+Finally, it returns the modified stack st1.
+insertAtBottom(Stack<Integer> st, int x): This method inserts an element x at the bottom of stack st. It first creates a new stack st1 with the element x. Then, it calls the push1 method with st and st1 as arguments, effectively pushing all elements of st onto st1, and then returns the modified stack st1.
