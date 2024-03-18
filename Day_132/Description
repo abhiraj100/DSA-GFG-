@@ -1,0 +1,29 @@
+Explanation :
+
+isSubsequence Method: This method checks if a given string s3 is a subsequence of two strings s1 and s2.
+
+Parameters:
+
+s1: The first string.
+s2: The second string.
+s3: The string to check if it's a subsequence of s1 and s2.
+i, j, k: Pointers for strings s1, s2, and s3, respectively.
+dp: A 2D array used for dynamic programming to store intermediate results.
+Algorithm:
+
+It checks if the current position (i, j) has already been computed, if yes, it returns the result from the dp array.
+If i, j, and k reach the end of strings s1, s2, and s3 respectively, then it means s3 is a subsequence of both s1 and s2, so it returns 1.
+Otherwise, it recursively checks if the current character of s1 or s2 matches the current character of s3, and if so, it moves forward in s1, s2, and s3.
+It stores the result in the dp array and returns it.
+isInterLeave Method: This method is the entry point to check if the string c is an interleaving of strings a and b.
+
+Parameters:
+
+a: The first string.
+b: The second string.
+c: The string to check if it's an interleaving of a and b.
+Algorithm:
+
+It first checks if the length of c matches the sum of lengths of a and b. If not, it returns false because c cannot be an interleaving in this case.
+It initializes a 2D array dp for dynamic programming to store intermediate results.
+It calls the isSubsequence method with appropriate parameters and returns true if the result is 1, indicating that c is an interleaving of a and b, otherwise it returns false.
