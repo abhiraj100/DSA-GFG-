@@ -1,0 +1,35 @@
+Explanation :
+
+Class Declaration:
+
+The code defines a class named Solution.
+Static Variables:
+
+ans: This is a static String variable initialized outside of any method, presumably to store the result.
+bigBoy Method:
+
+This method is a recursive function that aims to find the maximum number by performing swaps.
+Parameters:
+res: Current string (representing the number) being evaluated.
+counter: The remaining number of swaps allowed.
+pos: Current position in the string where the next swap can start from.
+Functionality:
+If the current res is greater than ans, update ans to the current res. This is done to keep track of the maximum number found so far.
+If the number of swaps left (counter) is greater than 0, proceed with the swap operations:
+Iterate through the string starting from the pos.
+For each character at index i, compare it with all subsequent characters (j) to find a character greater than i.
+If such a character is found, perform the swap and recursively call bigBoy with the updated string, decreased counter, and pos incremented by 1.
+swap Method:
+
+This method takes a string str and two indices i and j and swaps the characters at those indices.
+It utilizes StringBuilder for efficient string manipulation.
+findMaximumNum Method:
+
+This method is the entry point for finding the maximum number.
+Parameters:
+str: The input number as a string.
+k: The maximum number of swaps allowed.
+Functionality:
+Initialize ans to the input str.
+Call bigBoy with the input str, k, and starting position 0.
+Return the maximum number found stored in ans.
