@@ -1,0 +1,17 @@
+Explanation :
+
+public class Solution: This declares a class named Solution.
+
+public int romanToDecimal(String str): This is the method responsible for converting a Roman numeral string to its corresponding decimal value. It takes a string str representing the Roman numeral as input and returns an integer representing its decimal value.
+
+int result = getValue(str.charAt(str.length() - 1));: Initialize the result variable to the decimal value of the last character of the Roman numeral string using the getValue method.
+
+for(int i = str.length() - 2; i >= 0; i--): This loop iterates through the Roman numeral string from the second-to-last character to the first character.
+
+Inside the loop:
+
+if(getValue(str.charAt(i)) < getValue(str.charAt(i + 1))): This condition checks if the value of the current character is less than the value of the next character. If true, it subtracts the value of the current character from the result.
+else: If the current character's value is greater than or equal to the next character's value, it adds the value of the current character to the result.
+public int getValue(char c): This method takes a character representing a Roman numeral and returns its decimal value according to the Roman numeral system.
+
+The switch statement inside getValue matches the Roman numeral character to its corresponding decimal value and returns it. If the character doesn't match any case, it returns 0.
