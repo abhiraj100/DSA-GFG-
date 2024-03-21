@@ -1,0 +1,10 @@
+Explanation :
+
+The code then iterates over all possible rectangles using three nested loops: k, i, and j.
+The outer loop (k) determines the starting row of the rectangle.
+The middle loop (i) determines the ending row of the rectangle.
+The inner loop (j) iterates over columns from right to left.
+Within the innermost loop, curSum is computed as the sum of elements in the rectangle defined by the current row range [k, i] and the current column j.
+If k > 0, it subtracts the sum of elements above the rectangle (i.e., elements above row k) to handle the case where k > 0.
+sum accumulates the sum of elements in the current rectangle, and max stores the maximum sum encountered so far.
+Finally, the method returns the maximum sum found.
