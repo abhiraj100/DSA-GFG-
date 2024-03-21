@@ -1,0 +1,23 @@
+Explanation :
+
+The helper method is defined inside the class. It takes three parameters:
+
+p: A string representing the current subsequence being formed.
+up: A string representing the remaining portion of the input string that has not been included in the subsequence yet.
+vowel: A HashSet containing vowels ('a', 'e', 'i', 'o', 'u').
+
+Inside the helper method:
+
+If the remaining string up is empty, it means we have explored all characters of the input string. In this case, if the current subsequence p is not empty and its first character is a vowel while its last character is not a vowel, it is added to the result set ans.
+The method returns ans.
+The allPossibleSubsequences method is a static method of the Solution class. It initializes a HashSet named vowel containing the vowels.
+
+It calls the helper method with an empty initial subsequence "", the input string s, and the set of vowels vowel.
+
+The helper method is called recursively:
+
+At each step, it considers two possibilities:
+Include the current character in the subsequence (p + ch), and move to the next character in up.
+Exclude the current character from the subsequence (p remains unchanged), and move to the next character in up.
+The results of both possibilities are combined and returned.
+Finally, the method returns the result obtained from the helper method, which is a TreeSet containing all the subsequences that start and end with a vowel.
