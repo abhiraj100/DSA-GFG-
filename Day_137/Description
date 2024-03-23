@@ -1,0 +1,20 @@
+Explanation :
+
+public static int maxSubStr(String str): This line defines the method maxSubStr, which takes a string str as input and returns an integer. The method is declared as public and static, meaning it can be accessed without creating an instance of the Solution class.
+
+int c=0, u=0; int ans=0;: Three integer variables c, u, and ans are declared and initialized to 0.
+
+c: This variable tracks the count of '0's encountered in the string.
+u: This variable tracks the count of '1's encountered in the string.
+ans: This variable stores the maximum number of substrings that have equal numbers of '0's and '1's encountered so far.
+for(int i=0; i<str.length(); i++) {: This line starts a for loop that iterates through each character of the input string str.
+
+if(str.charAt(i) == '0') c++;: This condition checks if the current character is '0'. If it is, the variable c (count of '0's) is incremented.
+
+else u++;: If the current character is not '0' (i.e., it's '1'), the variable u (count of '1's) is incremented.
+
+if(c == u) ans++;: This condition checks if the counts of '0's and '1's encountered so far are equal. If they are, it means we have encountered a substring with an equal number of '0's and '1's. In this case, ans is incremented to count this substring.
+
+if(c != u) return -1;: After the loop completes, if the counts of '0's and '1's are not equal, it means the string cannot be partitioned into substrings with equal counts of '0's and '1's. In this case, -1 is returned to indicate that it's not possible.
+
+return ans;: If the counts of '0's and '1's are equal, the method returns the value stored in ans, which represents the maximum number of substrings with equal counts of '0's and '1's.
