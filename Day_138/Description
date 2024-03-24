@@ -1,0 +1,8 @@
+Explanation :
+
+Pair Class: This class is defined to represent a pair of integers (row, col). It's used to store coordinates in the grid.
+
+bfs Method: This method performs a breadth-first search (BFS) traversal on the grid starting from each cell with value 1. It calculates the distance of each cell from the nearest cell with value 1 and stores it in the ans array.
+
+nearest Method: This method initializes an ans array with the same dimensions as the input grid and then calls the bfs method to compute the distance of each cell from the nearest cell with value 1.
+
