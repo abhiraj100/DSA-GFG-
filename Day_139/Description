@@ -1,0 +1,23 @@
+Explanation :
+
+The method lookandsay takes an integer n as input, which represents the number of iterations to perform the "look and say" sequence.
+
+If n is 1, it returns "1" immediately because the first term in the "look and say" sequence is "1".
+
+Otherwise, it initializes the previous term (prev) to "11", as this is the starting point for the sequence.
+
+The method then iterates from i = 2 to n - 1. This loop generates subsequent terms in the sequence.
+
+Inside the loop, it initializes variables count and j to 0, and currDigit to the first character of the previous term (prev).
+
+The while loop iterates through the characters of the previous term (prev). It counts the number of consecutive occurrences of each digit.
+
+If the current character (prev.charAt(j)) is equal to currDigit, it increments the count. If not, it appends the count of the previous digit and the digit itself to the ans string, then updates currDigit and resets count to 1.
+
+After iterating through all characters of prev, it appends the count of the last digit and the digit itself to the ans string.
+
+The prev term is then updated to the generated ans.
+
+The ans string is reset for the next iteration.
+
+Once the loop completes, the method returns the final term of the sequence (prev).
