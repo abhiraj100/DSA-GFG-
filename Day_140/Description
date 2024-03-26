@@ -1,0 +1,15 @@
+Explanation :
+
+The code uses a Stack<Character> named s to keep track of the opening brackets encountered while iterating through the input string x.
+
+It iterates through each character of the input string x using a for loop.
+
+Inside the loop, it checks if the current character is an opening bracket (i.e., '(', '{', '['). If it is, the character is pushed onto the stack s.
+
+If the current character is not an opening bracket, it checks if the stack is not empty and if the current character is a closing bracket (')', '}', ']'). If both conditions are met, it compares the current character with the corresponding opening bracket at the top of the stack. If they match, indicating a balanced pair of brackets, it pops the opening bracket from the stack.
+
+If the conditions in step 4 are not met, it means either the stack is empty or the current character is a closing bracket that doesn't match with the opening bracket at the top of the stack. In this case, it pushes the current character onto the stack.
+
+After iterating through all characters in the input string, if the stack is empty, it means all opening brackets have been matched with their corresponding closing brackets, and hence the string has balanced brackets. In this case, the method returns true.
+
+If the stack is not empty after the loop, it means there are unmatched opening brackets remaining, and hence the string has unbalanced brackets. In this case, the method returns false.
