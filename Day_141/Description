@@ -1,0 +1,14 @@
+Explanation :
+
+The function maxSubstring takes a string S as input and returns an integer representing the maximum sum of a substring where '0's are counted as +1 and '1's are counted as -1.
+It initializes two variables sum and ans to keep track of the current sum and the maximum sum found so far, respectively.
+It iterates through each character of the input string S.
+For each character, if it's '0', it increments the sum; otherwise, it decrements the sum.
+If the sum becomes negative (indicating that the current substring has more '1's than '0's), it resets sum to 0.
+It updates ans to be the maximum of ans and sum.
+Finally, it returns -1 if ans is 0 (indicating no valid substrings were found) or returns ans otherwise (the maximum substring sum found).
+
+
+
+
+
