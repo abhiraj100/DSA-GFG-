@@ -1,0 +1,26 @@
+Explanation :
+
+Initialization:
+
+A 2D array ma is initialized to represent the adjacency matrix of the graph. ma[i][j] will represent the distance between city i and city j.
+The initialization sets all distances to a large value (10001), except for the distances from a city to itself, which are set to 0.
+Input Handling:
+
+The input array e contains edges between cities along with their distances. This information is used to populate the adjacency matrix.
+Floyd-Warshall Algorithm:
+
+The Floyd-Warshall algorithm is used to find the shortest distances between all pairs of cities in the graph. This algorithm works by iteratively considering all vertices as intermediate vertices and updating the shortest path if a shorter path is found.
+Finding the Most Connected City:
+
+After computing all-pairs shortest paths, the code iterates through each city (i) and counts the number of cities within the distance limit d from it.
+The city with the minimum number of connected cities within the distance limit is identified (ans).
+If there are multiple cities with the same minimum number of connected cities, the code will return the one with the smallest index.
+Returning the Result:
+
+The index of the city with the minimum number of connected cities within the distance limit is returned as the result.
+Notes:
+
+The initialization of ne with n + 1 seems unnecessary, as it could be initialized to Integer.MAX_VALUE to start with, and the condition cnt <= ne would still work correctly.
+The distances are initialized to 10001, which assumes that no distance between two cities exceeds 10000. This is a hardcoded limit, which might not be ideal for all cases.
+The code assumes that the input graph is connected. If the graph is not connected, some cities might not be reachable from others, and the algorithm might not work as expected.
+Overall, the code efficiently finds the city that is most connected to other cities within the given distance limit using the Floyd-Warshall algorithm.
